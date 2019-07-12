@@ -1,0 +1,23 @@
+!Xcursor.size: 60
+URxvt.cursorBlink: 1
+URxvt.cursorUnderline: 1
+!XTerm*termName: xterm-256color
+URxvt.keysym.Home: \033[1~
+URxvt.keysym.End: \033[4~
+URxvt.keysym.KP_Home: \033[1~
+URxvt.keysym.KP_End:  \033[4~
+
+urxvt*depth: 32
+!urxvt*transparent: true
+!urxvt*shading: 70
+urxvt*scrollBar: false
+!URxvt.font: xft:HackNerdFont:size=13
+urxvt.font: xft:Monofur:size=16
+urxvt*internalBorder: 20
+
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard,config-reload,xresources-256
+
+! Colors file
+#include ".Xcolors"
