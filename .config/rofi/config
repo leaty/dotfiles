@@ -28,3 +28,6 @@ rofi.auto-select: true
 rofi.combi-modi: run,drun,ssh
 rofi.modi: drun
 rofi.matching: fuzzy
+rofi.show-icons: true
+!rofi.icon-theme: Papirus-Grey
+!rofi.drun-icon-theme: Papirus-Grey
