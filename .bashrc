@@ -10,7 +10,8 @@ alias ls='ls --color=auto'
 PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
 #archey3
 
-export TERM=xterm-256color 
+export TERM=xterm-256color
+export EDITOR=vim
 
 # Base16 Shell
 #BASE16_SHELL="$HOME/.config/base16-shell/"
