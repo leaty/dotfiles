@@ -198,11 +198,18 @@ bindsym $mod+r mode "resize"
     #}
 #}
 
+
+exec --no-startup-id ~/.config/i3/monitors
+
 # My own settings
 # You can also use any non-zero value if you'd like to have a border
 # i3 gaps
 for_window [class=".*"] border pixel 0
 gaps inner 40
+
+set $mon_laptop eDP-1-1
+set $mon_two DP-1-1
+set $mon_one HDMI-1-2
 
 # Workspaces
 set $ws_term "1:term"
@@ -211,6 +218,13 @@ set $ws_web "3:web"
 set $ws_chat "4:chat"
 set $ws_game "5:game"
 set $ws_music "6:music"
+
+workspace $ws_term output $mon_one
+workspace $ws_code output $mon_one
+workspace $ws_web output $mon_two
+workspace $ws_chat output $mon_one
+workspace $ws_game output $mon_two
+workspace $ws_music output $mon_one
 
 # Assignments
 #assign [class="Sublime_text"] $ws_code
@@ -229,7 +243,7 @@ exec --no-startup-id i3-msg 'workspace 1:term; exec /usr/bin/urxvt'
 exec --no-startup-id i3-msg 'workspace 2:code; exec /usr/bin/subl'
 exec --no-startup-id i3-msg 'workspace 3:web; exec /usr/bin/firefox'
 exec --no-startup-id i3-msg 'workspace 4:chat; exec /usr/bin/discord'
-exec --no-startup-id i3-msg 'workspace 4:chat; exec ~/.scripts/steam/steam.sh'
+#exec --no-startup-id i3-msg 'workspace 4:chat; exec ~/.scripts/steam/steam.sh'
 exec --no-startup-id i3-msg 'workspace 6:music; exec /usr/bin/urxvt -e sh -c "ncmpcpp"'
 
 # Glitter and diamonds

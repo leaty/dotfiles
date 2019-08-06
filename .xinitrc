@@ -53,6 +53,8 @@ fi
 # load Xresources
 xrdb /home/leaty/.Xresources
 
+setxkbmap -layout se
+
 # start i3
 if [ -f /usr/bin/i3 ]; then
 	exec i3

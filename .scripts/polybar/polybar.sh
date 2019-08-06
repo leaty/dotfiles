@@ -8,3 +8,4 @@ sleep 0.1
 
 # Launch polybar
 polybar top &
+polybar top2 &

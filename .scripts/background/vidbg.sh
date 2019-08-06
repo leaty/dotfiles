@@ -2,7 +2,7 @@
 
 pkill xwinwrap
 
-sleep 0.2
+sleep 1
 
 #vid='Honkai-Impact-3-Live-Wallpaper-Free.mp4'
 #vid='In-The-Snow-Anime-Girl-Live-Wallpaper.m4v'
@@ -22,4 +22,6 @@ vid='4K-UHD-Flying-Above-Clouds-Live-Wallpaper.mp4'
 #vid='anime-girl-boat-bird.mp4'
 #vid='anime-girl-clown.mp4'
 
-xwinwrap -g 2560x1440 -ov -ni -fs -s -st -sp -b -nf -- mpv --mute=yes --loop --wid WID ~/Wallpapers/vid/$vid
+#xwinwrap -g 1920x1080+1920+0 -ov -ni -fs -s -st -sp -b -nf -- mpv --mute=yes --loop --wid WID ~/Wallpapers/vid/$vid
+xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --mute=yes --loop --wid WID ~/Wallpapers/vid/$vid &
+xwinwrap -g 1920x1080+1920+0 -ov -ni -s -nf -- mpv --mute=yes --loop --wid WID ~/Wallpapers/vid/$vid &
