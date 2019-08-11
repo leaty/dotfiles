@@ -50,6 +50,9 @@ fi
 # nm-applet
 /usr/bin/nm-applet &
 
+# Set kb repeat
+xset r rate 200 35
+
 # load Xresources
 xrdb /home/leaty/.Xresources
 
@@ -57,3 +60,8 @@ xrdb /home/leaty/.Xresources
 if [ -f /usr/bin/i3 ]; then
 	exec i3
 fi
+
+# start awesome
+#if [ -f /usr/bin/awesome ]; then
+#	exec awesome
+#fi

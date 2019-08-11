@@ -12,6 +12,7 @@ urxvt*depth: 32
 !urxvt*shading: 70
 urxvt*scrollBar: false
 !URxvt.font: xft:HackNerdFont:size=13
+!URxvt*font: xft:Symbola:style=Regular:pixelsize=14
 urxvt.font: xft:Monofur:size=16
 urxvt*internalBorder: 20
 
