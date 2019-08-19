@@ -12,7 +12,7 @@ urxvt*depth: 32
 !urxvt*shading: 70
 urxvt*scrollBar: false
 !URxvt.font: xft:HackNerdFont:size=13
-urxvt.font: xft:Monofur:size=19
+urxvt.font: xft:Monofur:size=19, xft:FuraMonoNerdFont:size=19
 urxvt*internalBorder: 20
 
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
