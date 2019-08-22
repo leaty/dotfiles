@@ -53,9 +53,20 @@ fi
 # load Xresources
 xrdb /home/leaty/.Xresources
 
+# Set keyboard
 setxkbmap -layout se
+xset r rate 200 35
+
+# Set up displays
+~/.scripts/xorg/xrandr.sh
 
 # start i3
 if [ -f /usr/bin/i3 ]; then
 	exec i3
 fi
+
+# start awesome
+#if [ -f /usr/bin/awesome ]; then
+#	exec awesome >> ~/.local/log/awesomewm.log 2>&1
+#fi
+
