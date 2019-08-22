@@ -62,7 +62,7 @@ awful.screen.connect_for_each_screen(
 				update_callback = function(self, c3, index, objects) --luacheck: no unused args
 					file = io.open("teststuff", "w")
 					io.output(file)
-					io.write(inspect(self:get_children_by_id('background_role')[1].get_forced_height(self)))
+					io.write(inspect(self:get_children_by_id('background_role')[1].set_forced_height(self)))
 					io.close(file)
             		--print(inspect(self:get_children_by_id('background_role')[1].get_forced_width()))
             		--self:get_children_by_id('background_role')[1].markup = '<b> '..index..' </b>'
