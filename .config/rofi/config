@@ -14,7 +14,7 @@ rofi.color-urgent: argb:00252936, #ff0000, argb:00252936, argb:00252936, #ff0000
 
 rofi.width: 100
 rofi.height: 100
-rofi.padding: 500
+rofi.padding: 334
 rofi.line-margin: 15
 rofi.lines: 5
 rofi.separator-style: none
@@ -24,10 +24,13 @@ rofi.bw: 0
 rofi.eh: 2
 rofi.hide-scrollbar: true
 rofi.auto-select: true
-!rofi.display-drun:⚌
+rofi.display-drun:
 rofi.combi-modi: run,drun,ssh
 rofi.modi: drun
 rofi.matching: fuzzy
+rofi.sort: true
+rofi.sorting-method: fzf
+rofi.levenshtein-sort: false
 rofi.show-icons: true
 !rofi.icon-theme: Papirus-Grey
 !rofi.drun-icon-theme: Papirus-Grey

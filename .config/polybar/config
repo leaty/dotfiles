@@ -1,7 +1,8 @@
 [bar/top]
-monitor = DP-4
+monitor = DP-2
+#monitor = DP-1-1
 width = 100%
-height = 36
+height = 30
 
 background = #99313842
 #background = #80ffffff
@@ -17,8 +18,12 @@ padding-right = 3
 padding-left = 2
 module-margin = 2
 
-font-0 = Monofur:weight=bold:size=11;3
-font-1 = FuraMonoNerdFont:size=14;4
+font-0 = Monofur:weight=bold:size=10;3
+font-1 = FuraMonoNerdFont:size=12;3
+font-2 = Noto Sans CJK JP:weight=bold:size=10:antialias=true;2
+#font-0 = ProggyCleanTT:weight=bold:size=11;3
+#font-1 = FuraMonoNerdFont:size=12;3
+#font-0 = OpenSansMono:size=10;3
 ;font-1 = RobotoMonoNerdFontMono:pixelsize=14;3
 ;font-1 = MaterialIcons:size=10;0
 ;font-2 = Termsynu:size=8:antialias=false;-2
@@ -43,6 +48,36 @@ tray-scale = 1.0
 
 ;[settings]
 ;pseudo-transparency = true
+
+[bar/top2]
+monitor = HDMI-0
+width = 100%
+height = 30
+
+background = #99313842
+foreground = #ffffff
+
+line-color = ${bar/bottom.background}
+line-size = 16
+
+spacing = 1
+padding-right = 3
+padding-left = 2
+module-margin = 2
+
+font-0 = Monofur:weight=bold:size=10;3
+font-1 = FuraMonoNerdFont:size=12;3
+#font-0 = OpenSansMono:size=10;3
+#font-0 = ProggyCleanTT:weight=bold:size=12;3
+#font-1 = FuraMonoNerdFont:size=12;3
+;font-1 = RobotoMonoNerdFontMono:pixelsize=14;3
+;font-1 = MaterialIcons:size=10;0
+;font-2 = Termsynu:size=8:antialias=false;-2
+;font-3 = FontAwesome5Free:style=Solid:pixelsize=11
+;font-4 = FontAwesome5Brands:style=Solid:pixelsize=11
+
+modules-left = i3
+modules-right = date
 
 [bar/bottom]
 ;monitor = eDP-1
@@ -357,21 +392,21 @@ icon-repeat = 凌
 toggle-on-foreground =
 toggle-off-foreground = #55
 
-bar-progress-width = 15
+bar-progress-width = 10
 bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
 bar-progress-indicator = |
 bar-progress-indicator-foreground = #ff
-bar-progress-indicator-font = 3
+bar-progress-indicator-font = 2
 bar-progress-fill = ─
 bar-progress-fill-foreground = #bb
-bar-progress-fill-font = 3
+bar-progress-fill-font = 1
 bar-progress-empty = ─
-bar-progress-empty-font = 3
+bar-progress-empty-font = 2
 bar-progress-empty-foreground = #44
 
 [module/wireless-network]
 type = internal/network
-interface = net1
+interface = wlp3s0
 interval = 3.0
 ping-interval = 10
 
@@ -394,7 +429,7 @@ animation-packetloss-framerate = 500
 
 [module/wired-network]
 type = internal/network
-interface = enp5s0
+interface = enp2s0
 interval = 1.0
 
 ;label-connected =   %{T3}%local_ip%%{T-}         %downspeed%  祝  %upspeed%

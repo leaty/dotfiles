@@ -1,24 +1,60 @@
-!Xcursor.size: 60
+!General
+URxvt.iso14755: False
+URxvt*saveLines: 100000
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.secondaryWheel: 1
+URxvt*scrollBar: false
 URxvt.cursorBlink: 1
 URxvt.cursorUnderline: 1
-!XTerm*termName: xterm-256color
-URxvt.keysym.Home: \033[1~
-URxvt.keysym.End: \033[4~
-URxvt.keysym.KP_Home: \033[1~
-URxvt.keysym.KP_End:  \033[4~
+URxvt*depth: 32
+URxvt*termName: rxvt-unicode-256color
+!URxvt*termName: screen-256color
+URxvt*internalBorder: 20
 
-urxvt*depth: 32
+!Clipboard
+URxvt.clipboard.autocopy: true
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.perl-ext-common: default,clipboard,config-reload,keyboard-select,resize-font
+
+
+!Keyboard select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
+!Font
+URxvt.font:\
+	xft:Monofur:size=17,\
+	xft:FuraMonoNerdFont:size=16,\
+	xft:Noto Sans Mono CJK JP:size=16
+URxvt*boldFont:\
+	xft:MonofurboldNerdFont:size=17,\
+	xft:FuraMonoNerdFont:size=16:style=bold
+URxvt*italicFont:\
+	xft:MonofuritalicNerdFont:size=17,\
+	xft:HackNerdFont:size=16:style=italic,\
+	xft:Hermit:size=16:style=italic,
+!URxvt*letterSpace: 2
+!URxvt*lineSpace: 1
+!URxvt.keysym.Control-plus: resize-font:bigger
+!URxvt.keysym.Control-minus: resize-font:smaller
+!URxvt.keysym.Control-equal: resize-font:reset
+
+!Old
+!URxvt.letterSpace: -1
+!URxvt.keysym.Home: \033[1~
+!URxvt.keysym.End: \033[4~
+!URxvt.keysym.KP_Home: \033[1~
+!URxvt.keysym.KP_End:  \033[4~
+
 !urxvt*transparent: true
 !urxvt*shading: 70
-urxvt*scrollBar: false
 !URxvt.font: xft:HackNerdFont:size=13
-!URxvt*font: xft:Symbola:style=Regular:pixelsize=14
-urxvt.font: xft:Monofur:size=16
-urxvt*internalBorder: 20
-
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.iso14755: False
-URxvt.perl-ext-common: default,clipboard,config-reload,xresources-256
+!Xcursor.size: 60
 
 ! Colors file
 #include ".Xcolors"
