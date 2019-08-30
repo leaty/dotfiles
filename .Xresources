@@ -1,5 +1,7 @@
 !Vars
 #define $font_size 18
+#define $font_size_bold 19
+#define $font_size_italic 19
 #define $font1 Monofur
 #define $font2 FuraMonoNerdFont
 #define $font3 Noto Sans Mono CJK JP
@@ -38,18 +40,18 @@ URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
 
 !Font
-URxvt.font:\
+URxvt*font:\
 	xft:$font1:size=$font_size,\
 	xft:$font2:size=$font_size,\
 	xft:$font3:size=$font_size
 URxvt*boldFont:\
-	xft:$font1_bold:size=$font_size,style=bold\
-	xft:$font2_bold:size=$font_size:style=bold
-	xft:$font3_bold:size=$font_size:style=bold
+	xft:$font1_bold:size=$font_size_bold,style=bold\
+	xft:$font2_bold:size=$font_size_bold:style=bold
+	xft:$font3_bold:size=$font_size_bold:style=bold
 URxvt*italicFont:\
-	xft:$font1_italic:size=$font_size:style=italic,\
-	xft:$font2_italic:size=$font_size:style=italic,\
-	xft:$font3_italic:size=$font_size:style=italic
+	xft:$font1_italic:size=$font_size_italic:style=italic,\
+	xft:$font2_italic:size=$font_size_italic:style=italic,\
+	xft:$font3_italic:size=$font_size_italic:style=italic
 
 !URxvt*letterSpace: 2
 !URxvt*lineSpace: 1
