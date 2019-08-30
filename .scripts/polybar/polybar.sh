@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 # Terminate already running bar instances
 killall -q polybar
@@ -7,5 +7,5 @@ killall -q polybar
 sleep 0.2
 
 # Launch polybar
-polybar top &
-polybar top2 &
+MONITOR=$MONITOR1 polybar top &
+#MONITOR=$MONITOR2 polybar top2 &

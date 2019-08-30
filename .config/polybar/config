@@ -1,8 +1,8 @@
 [bar/top]
-monitor = DP-2
+#monitor = DP-2
 #monitor = DP-1-1
 width = 100%
-height = 30
+height = 37
 
 background = #99313842
 #background = #80ffffff
@@ -18,8 +18,8 @@ padding-right = 3
 padding-left = 2
 module-margin = 2
 
-font-0 = Monofur:weight=bold:size=10;3
-font-1 = FuraMonoNerdFont:size=12;3
+font-0 = Monofur:weight=bold:size=11;3
+font-1 = FuraMonoNerdFont:size=14;4
 font-2 = Noto Sans CJK JP:weight=bold:size=10:antialias=true;2
 #font-0 = ProggyCleanTT:weight=bold:size=11;3
 #font-1 = FuraMonoNerdFont:size=12;3
@@ -50,7 +50,7 @@ tray-scale = 1.0
 ;pseudo-transparency = true
 
 [bar/top2]
-monitor = HDMI-0
+#monitor = HDMI-0
 width = 100%
 height = 30
 
