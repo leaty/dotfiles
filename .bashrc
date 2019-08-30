@@ -10,6 +10,11 @@ alias ls='ls --color=auto'
 PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
 #archey3
 
+# Script vars
+export SCREEN_X=2560
+export SCREEN_Y=1440
+
+# Vars
 export TERM=xterm-256color
 #export TERM=screen-256color
 #export TERM=rxvt-unicode-256color
