@@ -141,7 +141,7 @@ theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/m
 
 -- theme.wallpaper = 'Pictures/Wallpapers/wallhaven-605991.jpg'
 -- theme.wallpaper = 'Pictures/Wallpapers/pexels-photo-443446.jpeg'
-theme.wallpaper = 'Pictures/Wallpapers/G9KF6Jm.jpg'
+theme.wallpaper = 'cloud/wall/pic/G9KF6Jm.jpg'
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
