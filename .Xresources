@@ -1,3 +1,15 @@
+!Vars
+#define $font_size 18
+#define $font1 Monofur
+#define $font2 FuraMonoNerdFont
+#define $font3 Noto Sans Mono CJK JP
+#define $font1_bold MonofurboldNerdFont
+#define $font2_bold FuraMonoNerdFont
+#define $font3_bold Noto Sans Mono CJK JP
+#define $font1_italic MonofuritalicNerdFont
+#define $font2_italic FuraMonoNerdFont
+#define $font3_italic Noto Sans Mono CJK JP
+
 !General
 URxvt.iso14755: False
 URxvt*saveLines: 100000
@@ -21,23 +33,24 @@ URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.perl-ext-common: default,clipboard,config-reload,keyboard-select,resize-font
 
-
 !Keyboard select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
 
 !Font
 URxvt.font:\
-	xft:Monofur:size=17,\
-	xft:FuraMonoNerdFont:size=16,\
-	xft:Noto Sans Mono CJK JP:size=16
+	xft:$font1:size=$font_size,\
+	xft:$font2:size=$font_size,\
+	xft:$font3:size=$font_size
 URxvt*boldFont:\
-	xft:MonofurboldNerdFont:size=17,\
-	xft:FuraMonoNerdFont:size=16:style=bold
+	xft:$font1_bold:size=$font_size,style=bold\
+	xft:$font2_bold:size=$font_size:style=bold
+	xft:$font3_bold:size=$font_size:style=bold
 URxvt*italicFont:\
-	xft:MonofuritalicNerdFont:size=17,\
-	xft:HackNerdFont:size=16:style=italic,\
-	xft:Hermit:size=16:style=italic,
+	xft:$font1_italic:size=$font_size:style=italic,\
+	xft:$font2_italic:size=$font_size:style=italic,\
+	xft:$font3_italic:size=$font_size:style=italic
+
 !URxvt*letterSpace: 2
 !URxvt*lineSpace: 1
 !URxvt.keysym.Control-plus: resize-font:bigger
