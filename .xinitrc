@@ -37,8 +37,10 @@ fi
 
 # start Gnome keyring
 #if [ -f /usr/bin/gnome-keyring-daemon ]; then
+#	dbus-update-activation-environment --systemd DISPLAY
 #	eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 #	export SSH_AUTH_SOCK
+#	sleep 0.5
 #fi
 
 # environment variables
@@ -48,17 +50,21 @@ fi
 /usr/bin/nextcloud &
 
 # nm-applet
-/usr/bin/nm-applet &
+# Don't need anymore cuz no wifi
+#/usr/bin/nm-applet &
 
 # load Xresources
 xrdb /home/leaty/.Xresources
+
+# Load pywal
+wal -R
 
 # Set keyboard
 setxkbmap -layout se
 xset r rate 200 35
 
 # Set up displays
-~/.scripts/xorg/xrandr.sh
+#~/.scripts/xorg/xrandr.sh
 
 # start i3
 if [ -f /usr/bin/i3 ]; then
