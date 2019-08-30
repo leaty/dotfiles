@@ -11,7 +11,18 @@ PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31
 #archey3
 
 export TERM=xterm-256color
+#export TERM=screen-256color
+#export TERM=rxvt-unicode-256color
 export EDITOR=vim
+export SYSTEMD_EDITOR=vim
+export RANGER_LOAD_DEFAULT_RC=false
+export FZF_DEFAULT_OPTS='
+	--color bg:-1
+	--color bg+:-1
+	--color prompt:-1
+'
+
+PATH=$PATH:~/.local/bin
 
 # Base16 Shell
 #BASE16_SHELL="$HOME/.config/base16-shell/"
@@ -21,3 +32,19 @@ export EDITOR=vim
 
 alias db1='mysql --defaults-file=$HOME/.mysql/db1.conf'
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+alias vbg='xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --vo=vdpau --mute=yes --loop --wid WID'
+alias ccat='vimcat'
+alias vim='nvim'
+alias code="vim -S ~/.vim/session/orion"
+
+# Pywal
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+#cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh
