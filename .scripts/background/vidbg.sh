@@ -23,7 +23,7 @@ sleep 1
 #vid='4K-UHD-Flying-Above-Clouds-Live-Wallpaper.mp4'
 
 #vid='Rainy-Evening-Anime-Girl-Live-Wallpaper.mp4'
-vid='Grace-Lamp-Anime-Live-Wallpaper.mp4'
+#vid='Grace-Lamp-Anime-Live-Wallpaper.mp4'
 #vid='Girl-With-Flute-In-Rain-Anime-Live-Wallpaper-Free.mp4'
 #vid='Most-Beautiful-World-Hd-Live-Wallpaper.mp4'
 #vid='Rainfall-Girl-Anime-Live-Wallpaper-Free.mp4'
@@ -33,8 +33,12 @@ vid='Grace-Lamp-Anime-Live-Wallpaper.mp4'
 #vid='Touhou-Project-Anime-Live-Wallpaper.mp4'
 #vid='Touhou-Onozuka-Komachi-Live-Wallpaper-Free.mp4'
 #vid='Touhou-Fox-Girl-Anime-Live-Wallpaper-HD.m4v'
+#vid='winter-wolf.mp4'
+vid='In-The-Snow-Anime-Girl-Live-Wallpaper.m4v'
 
 
-#xwinwrap -g 1920x1080+1920+0 -ov -ni -fs -s -st -sp -b -nf -- mpv --mute=yes --loop --wid WID ~/Wallpapers/vid/$vid
-xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --mute=yes --loop --wid WID ~/Wallpapers/vid/$vid &
-xwinwrap -g 1920x1080+1920+0 -ov -ni -s -nf -- mpv --mute=yes --loop --wid WID ~/Wallpapers/vid/$vid &
+#xwinwrap -g 1920x1080+1920+0 -ov -ni -fs -s -st -sp -b -nf -- mpv --mute=yes --loop --wid WID ~/cloud/wall/vid/$vid
+
+vo='vdpau'
+xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --vo=$vo --mute=yes --loop --wid WID ~/cloud/wall/vid/$vid &
+xwinwrap -g 1920x1080+1920+0 -ov -ni -s -nf -- mpv --vo=$vo --mute=yes --loop --wid WID ~/cloud/wall/vid/$vid &
