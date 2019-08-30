@@ -46,7 +46,7 @@ bindsym $mod+d exec --no-startup-id "rofi -show"
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
+#bindsym $mod+l focus up
 bindsym $mod+odiaeresis focus right
 
 # alternatively, you can use the cursor keys:
@@ -199,7 +199,7 @@ bindsym $mod+r mode "resize"
 #}
 
 
-exec --no-startup-id ~/.config/i3/monitors
+#exec --no-startup-id ~/.config/i3/monitors
 
 # My own settings
 # You can also use any non-zero value if you'd like to have a border
@@ -207,9 +207,8 @@ exec --no-startup-id ~/.config/i3/monitors
 for_window [class=".*"] border pixel 0
 gaps inner 40
 
-set $mon_laptop eDP-1-1
-set $mon_two DP-1-1
-set $mon_one HDMI-1-2
+set $mon_two HDMI-0
+set $mon_one DP-2
 
 # Workspaces
 set $ws_term "1:term"
@@ -244,7 +243,7 @@ exec --no-startup-id i3-msg 'workspace 2:code; exec /usr/bin/subl'
 exec --no-startup-id i3-msg 'workspace 3:web; exec /usr/bin/firefox'
 exec --no-startup-id i3-msg 'workspace 4:chat; exec /usr/bin/discord'
 #exec --no-startup-id i3-msg 'workspace 4:chat; exec ~/.scripts/steam/steam.sh'
-exec --no-startup-id i3-msg 'workspace 6:music; exec /usr/bin/urxvt -e sh -c "ncmpcpp"'
+exec --no-startup-id i3-msg 'workspace 6:music; exec /usr/bin/urxvt -e bash -c "ncmpcpp"'
 
 # Glitter and diamonds
 exec_always --no-startup-id ~/.scripts/compton/compton.sh
@@ -312,6 +311,8 @@ bindsym --whole-window --border Mod1+Button4 workspace next
 # Alt tabbing
 bindsym Mod1+Tab workspace back_and_forth
 bindsym $mod+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
+
+bindsym $mod+l exec --no-startup-id i3lock-fancy -b=0x8
 
 #bindsym $mod+Shift+Return move container to workspace $ws_term
 #bindsym $mod+Shift+a move container to workspace $ws_code
