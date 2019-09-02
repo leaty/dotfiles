@@ -26,7 +26,7 @@ export FZF_DEFAULT_OPTS='
 	--color prompt:-1
 '
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias db1='mysql --defaults-file=$HOME/.mysql/db1.conf'
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias vbg='xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --vo=vdpau --mute=yes --loop --wid WID'
