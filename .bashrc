@@ -10,10 +10,8 @@ export SCREEN_Y=1440
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-#PS1='[\u@\h \W]\$ '
 PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
-#archey3
+PATH=$PATH:~/.local/bin
 
 # Vars
 export TERM=xterm-256color
@@ -28,14 +26,7 @@ export FZF_DEFAULT_OPTS='
 	--color prompt:-1
 '
 
-PATH=$PATH:~/.local/bin
-
-# Base16 Shell
-#BASE16_SHELL="$HOME/.config/base16-shell/"
-#[ -n "$PS1" ] && \
-#	    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-#	            eval "$("$BASE16_SHELL/profile_helper.sh")"
-
+alias ls='ls --color=auto'
 alias db1='mysql --defaults-file=$HOME/.mysql/db1.conf'
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias vbg='xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --vo=vdpau --mute=yes --loop --wid WID'
@@ -54,3 +45,12 @@ alias code="vim -S ~/.vim/session/orion"
 
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
+
+#PS1='[\u@\h \W]\$ '
+#archey3
+
+# Base16 Shell
+#BASE16_SHELL="$HOME/.config/base16-shell/"
+#[ -n "$PS1" ] && \
+#	    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#	            eval "$("$BASE16_SHELL/profile_helper.sh")"
