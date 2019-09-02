@@ -1,7 +1,7 @@
 !Vars
-#define $font_size 18
-#define $font_size_bold 19
-#define $font_size_italic 19
+#define $font_size 17
+#define $font_size_bold 17
+#define $font_size_italic 17
 #define $font1 Monofur
 #define $font2 FuraMonoNerdFont
 #define $font3 Noto Sans Mono CJK JP
