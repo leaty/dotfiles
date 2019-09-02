@@ -41,3 +41,4 @@ vid='In-The-Snow-Anime-Girl-Live-Wallpaper.m4v'
 
 vo='vdpau'
 xwinwrap -g ${SCREEN_X}x${SCREEN_Y} -ov -ni -s -nf -- mpv --vo=$vo --mute=yes --loop --wid WID ~/cloud/wall/vid/$vid &
+xwinwrap -g ${SCREEN_X}x${SCREEN_Y}+${SCREEN_X}+0 -ov -ni -s -nf -- mpv --vo=$vo --mute=yes --loop --wid WID ~/cloud/wall/vid/$vid &
