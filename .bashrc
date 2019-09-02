@@ -17,8 +17,8 @@ PATH=$PATH:~/.local/bin
 export TERM=xterm-256color
 #export TERM=screen-256color
 #export TERM=rxvt-unicode-256color
-export EDITOR=vim
-export SYSTEMD_EDITOR=vim
+export EDITOR=nvim
+export SYSTEMD_EDITOR=nvim
 export RANGER_LOAD_DEFAULT_RC=false
 export FZF_DEFAULT_OPTS='
 	--color bg:-1
