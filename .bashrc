@@ -32,6 +32,7 @@ alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias vbg='xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --vo=vdpau --mute=yes --loop --wid WID'
 alias ccat='vimcat'
 alias vim='nvim'
+alias svim='sudoedit'
 alias code="vim -S ~/.vim/session/orion"
 
 # Pywal
