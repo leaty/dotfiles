@@ -8,19 +8,19 @@
     --tridactyl-vs-font-family: Ubuntu Mono;
     --tridactyl-cmdl-font-family: Ubuntu Mono;
     --tridactyl-cmplt-font-family: Ubuntu Mono;
-    --tridactyl-font-size: 12pt;
-    --tridactyl-status-font-size: 12pt;
-    --tridactyl-hintspan-font-size: 12pt;
-    --tridactyl-vs-font-size: 12pt;
-    --tridactyl-cmdl-font-size: 12pt;
-    --tridactyl-cmplt-font-size: 12pt;
+    --tridactyl-font-size: 14pt;
+    --tridactyl-status-font-size: 14pt;
+    --tridactyl-hintspan-font-size: 14pt;
+    --tridactyl-vs-font-size: 14pt;
+    --tridactyl-cmdl-font-size: 14pt;
+    --tridactyl-cmplt-font-size: 14pt;
 }
 #completions .option {
-	height: 20px;
+	height: 29px;
 }
 
 #completions > div > table {
-	font-size: 12pt;
+	font-size: 14pt;
 }
 
 :root.TridactylThemeCustomquake #completions .sectionHeader {
