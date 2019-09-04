@@ -1,7 +1,7 @@
 !Vars
-#define $font_size 15
-#define $font_size_bold 15
-#define $font_size_italic 15
+#define $font_size 17
+#define $font_size_bold 17
+#define $font_size_italic 17
 #define $font1 Ubuntu Mono
 #define $font2 FuraMonoNerdFont
 #define $font3 Noto Sans Mono CJK JP
@@ -54,7 +54,7 @@ URxvt*italicFont:\
 	xft:$font3_italic:size=$font_size_italic:style=italic
 
 !URxvt*letterSpace: 2
-!URxvt*lineSpace: 1
+URxvt*lineSpace: 1
 !URxvt.keysym.Control-plus: resize-font:bigger
 !URxvt.keysym.Control-minus: resize-font:smaller
 !URxvt.keysym.Control-equal: resize-font:reset
