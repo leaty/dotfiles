@@ -1,0 +1,47 @@
+:root.TridactylThemeCustomquake {
+    --tridactyl-bg: rgba(36, 41, 46, 0.8);
+    --tridactyl-fg: white;
+    --tridactyl-font-family: Ubuntu Mono;
+    --tridactyl-font-family-sans: Ubuntu Mono;
+    --tridactyl-status-font-family: Ubuntu Mono;
+    --tridactyl-hintspan-font-family: Ubuntu Mono;
+    --tridactyl-vs-font-family: Ubuntu Mono;
+    --tridactyl-cmdl-font-family: Ubuntu Mono;
+    --tridactyl-cmplt-font-family: Ubuntu Mono;
+    --tridactyl-font-size: 12pt;
+    --tridactyl-status-font-size: 12pt;
+    --tridactyl-hintspan-font-size: 12pt;
+    --tridactyl-vs-font-size: 12pt;
+    --tridactyl-cmdl-font-size: 12pt;
+    --tridactyl-cmplt-font-size: 12pt;
+}
+#completions .option {
+	height: 20px;
+}
+
+#completions > div > table {
+	font-size: 12pt;
+}
+
+:root.TridactylThemeCustomquake #completions .sectionHeader {
+    display: none;
+}
+
+:root.TridactylThemeCustomquake #tridactyl-colon::before {
+    content: "] ";
+}
+
+:root.TridactylThemeCustomquake #completions .focused,
+:root.TridactylThemeCustomquake #completions .focused .url {
+    background: var(--tridactyl-bg);
+    text-decoration: underline;
+}
+
+:root.TridactylThemeCustomquake #cmdline_iframe {
+    position: fixed !important;
+    bottom: unset;
+    top: 0% !important;
+    left: 0% !important;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px !important;
+    opacity: 1;
+}
