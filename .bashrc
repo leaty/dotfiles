@@ -3,7 +3,7 @@
 #
 
 # Script vars
-#export MONITOR1='DP-4'
+export MONITOR1='DP-4'
 export SCREEN_X=2560
 export SCREEN_Y=1440
 
