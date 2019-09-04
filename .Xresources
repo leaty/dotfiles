@@ -1,14 +1,14 @@
 !Vars
-#define $font_size 18
-#define $font_size_bold 19
-#define $font_size_italic 19
-#define $font1 Monofur
+#define $font_size 15
+#define $font_size_bold 15
+#define $font_size_italic 15
+#define $font1 Ubuntu Mono
 #define $font2 FuraMonoNerdFont
 #define $font3 Noto Sans Mono CJK JP
-#define $font1_bold MonofurboldNerdFont
+#define $font1_bold Ubuntu Mono
 #define $font2_bold FuraMonoNerdFont
 #define $font3_bold Noto Sans Mono CJK JP
-#define $font1_italic MonofuritalicNerdFont
+#define $font1_italic Ubuntu Mono
 #define $font2_italic FuraMonoNerdFont
 #define $font3_italic Noto Sans Mono CJK JP
 
@@ -45,7 +45,7 @@ URxvt*font:\
 	xft:$font2:size=$font_size,\
 	xft:$font3:size=$font_size
 URxvt*boldFont:\
-	xft:$font1_bold:size=$font_size_bold,style=bold,\
+	xft:$font1_bold:size=$font_size_bold:style=bold,\
 	xft:$font2_bold:size=$font_size_bold:style=bold,\
 	xft:$font3_bold:size=$font_size_bold:style=bold
 URxvt*italicFont:\
