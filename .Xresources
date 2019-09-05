@@ -54,7 +54,7 @@ URxvt*italicFont:\
 	xft:$font3_italic:size=$font_size_italic:style=italic
 
 !URxvt*letterSpace: 2
-!URxvt*lineSpace: 1
+URxvt*lineSpace: 1
 !URxvt.keysym.Control-plus: resize-font:bigger
 !URxvt.keysym.Control-minus: resize-font:smaller
 !URxvt.keysym.Control-equal: resize-font:reset
