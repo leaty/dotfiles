@@ -1,7 +1,8 @@
 #!/bin/sh
 
 action=$1
-card='alsa_output.pci-0000_0b_04.0'
+#card='alsa_output.pci-0000_0b_04.0'
+card='alsa_output.usb-FiiO_FiiO_USB_DAC-E18-01'
 sink=$(pactl list sinks | grep "Name: $card." | awk '{print $2}')
 
 case $action in
