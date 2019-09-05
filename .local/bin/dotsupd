@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+	echo 'Missing branch-to-update argument.'
+	exit 1
+fi
+
+dots="git --git-dir=$HOME/.dots/ --work-tree=$HOME"
+b=$1
+m=master
+
+$dots push
+$dots checkout $b
+$dots merge --no-edit $m
+$dots push
