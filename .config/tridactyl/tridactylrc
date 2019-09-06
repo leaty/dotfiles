@@ -1,4 +1,4 @@
 colors customquake
 bind D composite tabclose | tab #
-bind j scrollline 3
-bind k scrollline -3
+bind j scrollline 5
+bind k scrollline -5
