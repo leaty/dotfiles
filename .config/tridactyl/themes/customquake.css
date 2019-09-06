@@ -45,3 +45,21 @@
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px !important;
     opacity: 1;
 }
+
+.TridactylHintElem, .TridactylHintActive {
+	background-color: #1b1d23 !important;
+	color: #af6161 !important;
+	outline: 1px solid #6c7284 !important;
+}
+
+.TridactylHintActive {
+	background-color: #af6161 !important;
+	color: #fff !important;
+	outline: 1px solid #e65858 !important
+}
+
+span.TridactylHint {
+	background-color: #1b1d23 !important;
+	color: #86cc88 !important;
+	outline: 1px solid #6a6a6a !important;
+}
