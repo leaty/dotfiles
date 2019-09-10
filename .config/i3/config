@@ -206,6 +206,7 @@ bindsym $mod+r mode "resize"
 # i3 gaps
 for_window [class=".*"] border pixel 0
 gaps inner 40
+mouse_warping none
 
 set $mon_two HDMI-0
 set $mon_one DP-2
