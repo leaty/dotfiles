@@ -31,6 +31,7 @@ rofi.matching: fuzzy
 rofi.sort: true
 rofi.sorting-method: fzf
 rofi.levenshtein-sort: false
+rofi.monitor: -1
 rofi.show-icons: true
 !rofi.icon-theme: Papirus-Grey
 !rofi.drun-icon-theme: Papirus-Grey
