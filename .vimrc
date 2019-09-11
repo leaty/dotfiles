@@ -41,7 +41,6 @@ set softtabstop=4
 
 "Disable nvim bs
 "let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
-set guicursor=
 "hi Normal guibg=NONE ctermbg=NONE
 "hi NonText guibg=NONE ctermbg=NONE
 hi StatusLine cterm=NONE
@@ -77,6 +76,13 @@ set fillchars+=vert:\
 set mouse=a
 set clipboard+=unnamed
 set clipboard+=unnamedplus
+
+"Cursor
+au VimLeave * set guicursor=a:hor25-blinkon250
+set guicursor=\
+	\a:hor25-blinkon250,
+	\v:block,
+	\i:ver25-blinkon250
 
 "Wrap
 set nowrap
