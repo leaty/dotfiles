@@ -14,7 +14,7 @@ rofi.color-urgent: argb:00252936, #ff0000, argb:00252936, argb:00252936, #ff0000
 
 rofi.width: 100
 rofi.height: 100
-rofi.padding: 464
+rofi.padding: 334
 rofi.line-margin: 15
 rofi.lines: 5
 rofi.separator-style: none
