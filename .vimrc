@@ -70,11 +70,6 @@ set statusline+=%=
 set statusline+=\ %3*%l,%c%*
 set statusline+=\ %4*%p%%%*
 
-"Line numbers
-set number
-set nuw=1
-hi LineNr ctermfg=250
-
 "Vertsplit
 set fillchars+=vert:\ 
 
@@ -105,6 +100,18 @@ let g:fzf_colors =
 	\ 'marker':  ['fg', 'Keyword'],
 	\ 'spinner': ['fg', 'Label'],
 	\ 'header':  ['fg', 'Comment'] }
+
+"Line numbers
+set number relativenumber
+set nuw=1
+hi LineNr ctermfg=245
+hi CursorLineNR ctermfg=white
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 "Keybinds
 
