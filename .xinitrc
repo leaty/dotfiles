@@ -53,9 +53,6 @@ fi
 # Don't need anymore cuz no wifi
 #/usr/bin/nm-applet &
 
-# Set kb repeat
-xset r rate 200 35
-
 # load Xresources
 xrdb /home/leaty/.Xresources
 

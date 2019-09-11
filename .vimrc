@@ -41,7 +41,6 @@ set softtabstop=4
 
 "Disable nvim bs
 "let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
-set guicursor=
 "hi Normal guibg=NONE ctermbg=NONE
 "hi NonText guibg=NONE ctermbg=NONE
 hi StatusLine cterm=NONE
@@ -70,11 +69,6 @@ set statusline+=%=
 set statusline+=\ %3*%l,%c%*
 set statusline+=\ %4*%p%%%*
 
-"Line numbers
-set number
-set nuw=1
-hi LineNr ctermfg=250
-
 "Vertsplit
 set fillchars+=vert:\ 
 
@@ -82,6 +76,13 @@ set fillchars+=vert:\
 set mouse=a
 set clipboard+=unnamed
 set clipboard+=unnamedplus
+
+"Cursor
+au VimLeave * set guicursor=a:hor25-blinkon250
+set guicursor=\
+	\a:hor25-blinkon250,
+	\v:block,
+	\i:ver25-blinkon250
 
 "Wrap
 set nowrap
@@ -105,6 +106,18 @@ let g:fzf_colors =
 	\ 'marker':  ['fg', 'Keyword'],
 	\ 'spinner': ['fg', 'Label'],
 	\ 'header':  ['fg', 'Comment'] }
+
+"Line numbers
+set number relativenumber
+set nuw=1
+hi LineNr ctermfg=245
+hi CursorLineNR ctermfg=white
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 "Keybinds
 
