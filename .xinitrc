@@ -65,6 +65,8 @@ wal -R
 # Set keyboard
 setxkbmap -layout se
 xset r rate 200 35
+xmodmap -e "clear lock"
+xmodmap -e "keysym Caps_Lock = Escape"
 
 # Set up displays
 #~/.scripts/xorg/xrandr.sh
