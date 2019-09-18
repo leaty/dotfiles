@@ -123,7 +123,9 @@ augroup END
 let split_term_list=[]
 function SplitTerm(...)
 	let file=get(a:, 1, '')
-	bd
+	if file != ''
+		bd
+	endif
 	let job_id=jobstart(
 		\'urxvt -e bash --init-file <(echo "source ~/.bashrc;cd '.getcwd().';nvim '.file.';exit")',
 		\{'on_exit': 'OnExitSplitTerm'})
