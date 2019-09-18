@@ -119,6 +119,34 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
+"Open buffer in new terminal
+let split_term_list=[]
+function SplitTerm(...)
+	let file=get(a:, 1, '')
+	bd
+	let job_id=jobstart(
+		\'urxvt -e bash --init-file <(echo "source ~/.bashrc;cd '.getcwd().';nvim '.file.';exit")',
+		\{'on_exit': 'OnExitSplitTerm'})
+	call add(g:split_term_list, job_id)
+endfunction
+
+function OnExitSplitTerm(job_id, code, event)
+	let idx = index(g:split_term_list, a:job_id)
+	if idx > -1
+		call remove(g:split_term_list, idx)
+	endif
+endfunction
+
+"OnExit
+function OnExit()
+	if empty(g:split_term_list)
+		quit
+	else
+		echo 'Refusing to close with split terms open.'
+		echo 'Splits: '.string(g:split_term_list)
+	endif
+endfunction
+
 "Keybinds
 
 "bind move select/line
@@ -136,9 +164,14 @@ noremap <silent> <C-s> :w<CR>
 
 "bind close
 noremap <silent> <C-w> :bd<CR>
-noremap <silent> <C-q> :q<CR>
+noremap <silent> <C-q> :call OnExit()<CR>
 
 "bind fzf
 noremap <silent> <C-p> :Files .<cr>
 noremap <silent> <S-tab> :Buffers .<cr>
+noremap <silent> <C-f> :Rg .<cr>
+
+"bind open new vim or current buffer in new terminal emulator
+noremap <silent> tn<CR> :call SplitTerm()<cr>
+noremap <silent> tb<CR> :call SplitTerm(expand('%'))<cr>
 
