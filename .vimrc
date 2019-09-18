@@ -169,7 +169,7 @@ noremap <silent> <C-w> :bd<CR>
 noremap <silent> <C-q> :call OnExit()<CR>
 
 "bind fzf
-noremap <silent> <C-p> :Files .<cr>
+noremap <silent> <C-p> :FZF .<cr>
 noremap <silent> <S-tab> :Buffers .<cr>
 noremap <silent> <C-f> :Rg .<cr>
 
