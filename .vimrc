@@ -41,7 +41,6 @@ set softtabstop=4
 
 "Disable nvim bs
 "let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
-set guicursor=
 "hi Normal guibg=NONE ctermbg=NONE
 "hi NonText guibg=NONE ctermbg=NONE
 hi StatusLine cterm=NONE
@@ -70,11 +69,6 @@ set statusline+=%=
 set statusline+=\ %3*%l,%c%*
 set statusline+=\ %4*%p%%%*
 
-"Line numbers
-set number
-set nuw=1
-hi LineNr ctermfg=250
-
 "Vertsplit
 set fillchars+=vert:\ 
 
@@ -82,6 +76,13 @@ set fillchars+=vert:\
 set mouse=a
 set clipboard+=unnamed
 set clipboard+=unnamedplus
+
+"Cursor
+au VimLeave * set guicursor=a:hor25-blinkon250
+set guicursor=\
+	\a:hor25-blinkon250,
+	\v:block,
+	\i:ver25-blinkon250
 
 "Wrap
 set nowrap
@@ -106,6 +107,48 @@ let g:fzf_colors =
 	\ 'spinner': ['fg', 'Label'],
 	\ 'header':  ['fg', 'Comment'] }
 
+"Line numbers
+set number relativenumber
+set nuw=1
+hi LineNr ctermfg=245
+hi CursorLineNR ctermfg=white
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+"Open buffer in new terminal
+let split_term_list=[]
+function SplitTerm(...)
+	let file=get(a:, 1, '')
+	if file != ''
+		bd
+	endif
+	let job_id=jobstart(
+		\'urxvt -e bash --init-file <(echo "source ~/.bashrc;cd '.getcwd().';nvim '.file.';exit")',
+		\{'on_exit': 'OnExitSplitTerm'})
+	call add(g:split_term_list, job_id)
+endfunction
+
+function OnExitSplitTerm(job_id, code, event)
+	let idx = index(g:split_term_list, a:job_id)
+	if idx > -1
+		call remove(g:split_term_list, idx)
+	endif
+endfunction
+
+"OnExit
+function OnExit()
+	if empty(g:split_term_list)
+		quit
+	else
+		echo 'Refusing to close with split terms open.'
+		echo 'Splits: '.string(g:split_term_list)
+	endif
+endfunction
+
 "Keybinds
 
 "bind move select/line
@@ -123,9 +166,14 @@ noremap <silent> <C-s> :w<CR>
 
 "bind close
 noremap <silent> <C-w> :bd<CR>
-noremap <silent> <C-q> :q<CR>
+noremap <silent> <C-q> :call OnExit()<CR>
 
 "bind fzf
-noremap <silent> <C-p> :Files .<cr>
+noremap <silent> <C-p> :FZF .<cr>
 noremap <silent> <S-tab> :Buffers .<cr>
+noremap <silent> <C-f> :Rg .<cr>
+
+"bind open new vim or current buffer in new terminal emulator
+noremap <silent> tn<CR> :call SplitTerm()<cr>
+noremap <silent> tb<CR> :call SplitTerm(expand('%'))<cr>
 
