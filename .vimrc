@@ -120,33 +120,14 @@ augroup numbertoggle
 augroup END
 
 "Open buffer in new terminal
-let split_term_list=[]
 function SplitTerm(...)
 	let file=get(a:, 1, '')
 	if file != ''
 		bd
 	endif
-	let job_id=jobstart(
-		\'urxvt -e bash --init-file <(echo "source ~/.bashrc;cd '.getcwd().';nvim '.file.';exit")',
+	call jobstart(
+		\'nohup urxvt -e bash --init-file <(echo "source ~/.bashrc;cd '.getcwd().';nvim '.file.';exit") > /dev/null 2>&1 &',
 		\{'on_exit': 'OnExitSplitTerm'})
-	call add(g:split_term_list, job_id)
-endfunction
-
-function OnExitSplitTerm(job_id, code, event)
-	let idx = index(g:split_term_list, a:job_id)
-	if idx > -1
-		call remove(g:split_term_list, idx)
-	endif
-endfunction
-
-"OnExit
-function OnExit()
-	if empty(g:split_term_list)
-		quit
-	else
-		echo 'Refusing to close with split terms open.'
-		echo 'Splits: '.string(g:split_term_list)
-	endif
 endfunction
 
 "Keybinds
@@ -166,7 +147,7 @@ noremap <silent> <C-s> :w<CR>
 
 "bind close
 noremap <silent> <C-w> :bd<CR>
-noremap <silent> <C-q> :call OnExit()<CR>
+noremap <silent> <C-q> :q<CR>
 
 "bind fzf
 noremap <silent> <C-p> :FZF .<cr>
