@@ -20,6 +20,7 @@ export TERM=xterm-256color
 export EDITOR=nvim
 export SYSTEMD_EDITOR=nvim
 export RANGER_LOAD_DEFAULT_RC=false
+export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='
 	--color bg:-1
 	--color bg+:-1
