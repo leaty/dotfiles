@@ -34,7 +34,17 @@ alias vbg='xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --vo=vdpau --mute=yes --l
 alias ccat='vimcat'
 alias vim='nvim'
 alias svim='sudoedit'
-alias code="vim -S ~/.vim/session/orion"
+
+# Command to open vim sessions
+code() {
+	if [ -z "$1" ]; then
+		nvim -c :Sessions
+	elif [ ! -f "~/.vim/session/$1" ]; then
+		nvim -S ~/.vim/session/$1
+	else
+		echo "Session $1 does not exist."
+	fi
+}
 
 # Pywal
 # Import colorscheme from 'wal' asynchronously
