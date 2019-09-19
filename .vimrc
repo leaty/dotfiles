@@ -1,6 +1,9 @@
-if &compatible
-	set nocompatible
-endif
+" Fix for vim, this is default for nvim
+if &compatible | set nocompatible | endif
+
+" Set <leader>
+let mapleader=','
+
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
@@ -146,15 +149,17 @@ noremap <silent> <C-s> :w<CR>
 "inoremap <silent> <C-s> <ESC>:w<CR>
 
 "bind close
-noremap <silent> <C-w> :bd<CR>
-noremap <silent> <C-q> :q<CR>
+nnoremap <silent> <C-w> :bd<CR>
+nnoremap <silent> <C-q> :q<CR>
 
 "bind fzf
-noremap <silent> <C-p> :FZF .<cr>
-noremap <silent> <S-tab> :Buffers .<cr>
-noremap <silent> <C-f> :Rg .<cr>
+nnoremap <silent> <C-p> :FZF .<CR>
+nnoremap <silent> <S-tab> :Buffers .<CR>
+nnoremap <silent> <C-f> :Rg .<CR>
+nnoremap <silent> <leader>s :Sessions<CR>
+nnoremap <leader>ns :Session<Space>
 
 "bind open new vim or current buffer in new terminal emulator
-noremap <silent> tn<CR> :call SplitTerm()<cr>
-noremap <silent> tb<CR> :call SplitTerm(expand('%'))<cr>
+nnoremap <silent> <leader>t :call SplitTerm()<CR>
+nnoremap <silent> <leader>b :call SplitTerm(expand('%'))<CR>
 
