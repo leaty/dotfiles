@@ -129,8 +129,7 @@ function SplitTerm(...)
 		bd
 	endif
 	call jobstart(
-		\'nohup urxvt -e bash --init-file <(echo "source ~/.bashrc;cd '.getcwd().';nvim '.file.';exit") > /dev/null 2>&1 &',
-		\{'on_exit': 'OnExitSplitTerm'})
+		\'nohup urxvt -e bash --init-file <(echo "source ~/.bashrc;cd '.getcwd().';nvim '.file.';exit") > /dev/null 2>&1 &')
 endfunction
 
 "Keybinds
