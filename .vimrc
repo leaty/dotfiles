@@ -153,7 +153,7 @@ nnoremap <silent> <C-q> :q<CR>
 
 "bind fzf
 nnoremap <silent> <C-p> :FZF .<CR>
-nnoremap <silent> <S-tab> :Buffers .<CR>
+nnoremap <silent> <S-tab> :Buffers<CR>
 nnoremap <silent> <C-f> :Rg .<CR>
 nnoremap <silent> <leader>s :Sessions<CR>
 nnoremap <leader>ns :Session<Space>
