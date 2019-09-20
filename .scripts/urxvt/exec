@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Ensures bash profile gets loaded before starting
+# Also exits urxvt after closing
+urxvt -e bash --init-file <(echo "source ~/.bashrc;"$@";exit")
