@@ -218,21 +218,23 @@ fuzzy-match = false
 ;ws-icon-6 = 7;
 ;ws-icon-7 = 8;
 ;ws-icon-8 = 9;
+
 ws-icon-0 = 1:term; 
 ws-icon-1 = 2:code; 
 ws-icon-2 = 3:web; 
-ws-icon-3 = 4:chat; 
+ws-icon-3 = 4:search; 
+ws-icon-4 = 5:chat; 
 ;ws-icon-3 = 4:chat; 
 ;ws-icon-3 = 4:chat; 
-ws-icon-4 = 5:game; 
-ws-icon-5 = 6:music; ﱘ
+ws-icon-5 = 6:game; 
+ws-icon-6 = 7:music; ﱘ
 ;ws-icon-5 = 6:music; 
 ws-icon-default = " "
 
-label-focused = %icon%
-label-unfocused = %icon%
-label-urgent = %icon%
-label-visible = %icon%
+label-focused = %{T2}%icon%
+label-unfocused = %{T2}%icon%
+label-urgent = %{T2}%icon%
+label-visible = %{T2}%icon%
 
 label-unfocused-foreground = #fff
 label-focused-foreground = #009dff
