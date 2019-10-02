@@ -221,11 +221,12 @@ fuzzy-match = false
 ws-icon-0 = 1:term; 
 ws-icon-1 = 2:code; 
 ws-icon-2 = 3:web; 
-ws-icon-3 = 4:chat; 
+ws-icon-3 = 4:search; ﰍ
+ws-icon-4 = 5:chat; 
 ;ws-icon-3 = 4:chat; 
 ;ws-icon-3 = 4:chat; 
-ws-icon-4 = 5:game; 
-ws-icon-5 = 6:music; ﱘ
+ws-icon-5 = 6:game; 
+ws-icon-6 = 7:music; ﱘ
 ;ws-icon-5 = 6:music; 
 ws-icon-default = " "
 
