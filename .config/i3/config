@@ -215,13 +215,15 @@ set $mon_one DP-2
 set $ws_term "1:term"
 set $ws_code "2:code"
 set $ws_web "3:web"
-set $ws_chat "4:chat"
-set $ws_game "5:game"
-set $ws_music "6:music"
+set $ws_search "4:search"
+set $ws_chat "5:chat"
+set $ws_game "6:game"
+set $ws_music "7:music"
 
 workspace $ws_term output $mon_one
 workspace $ws_code output $mon_one
 workspace $ws_web output $mon_two
+workspace $ws_search output $mon_two
 workspace $ws_chat output $mon_one
 workspace $ws_game output $mon_two
 workspace $ws_music output $mon_one
@@ -242,9 +244,9 @@ assign [class="Wine"] $ws_game
 exec --no-startup-id i3-msg 'workspace 1:term; exec /usr/bin/urxvt'
 exec --no-startup-id i3-msg 'workspace 2:code; exec ~/.scripts/urxvt/exec code'
 exec --no-startup-id i3-msg 'workspace 3:web; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace 4:chat; exec /usr/bin/discord'
+exec --no-startup-id i3-msg 'workspace 5:chat; exec /usr/bin/discord'
 #exec --no-startup-id i3-msg 'workspace 4:chat; exec ~/.scripts/steam/steam.sh'
-exec --no-startup-id i3-msg 'workspace 6:music; exec ~/.scripts/urxvt/exec ncmpcpp'
+exec --no-startup-id i3-msg 'workspace 7:music; exec ~/.scripts/urxvt/exec ncmpcpp'
 
 # Glitter and diamonds
 exec_always --no-startup-id ~/.scripts/compton/compton.sh
@@ -287,12 +289,14 @@ bindsym Mod1+3 workspace $ws_web
 bindsym Mod1+4 workspace $ws_chat
 bindsym Mod1+5 workspace $ws_game
 bindsym Mod1+6 workspace $ws_music
+bindsym Mod1+7 workspace $ws_search
 bindsym Mod1+z workspace $ws_term
 bindsym Mod1+x workspace $ws_code
 bindsym Mod1+c workspace $ws_web
 bindsym Mod1+v workspace $ws_chat
 bindsym Mod1+b workspace $ws_game
 bindsym Mod1+n workspace $ws_music
+bindsym Mod1+m workspace $ws_search
 
 bindsym Mod1+Shift+z move container to workspace $ws_term
 bindsym Mod1+Shift+x move container to workspace $ws_code
@@ -300,6 +304,7 @@ bindsym Mod1+Shift+c move container to workspace $ws_web
 bindsym Mod1+Shift+v move container to workspace $ws_chat
 bindsym Mod1+Shift+b move container to workspace $ws_game
 bindsym Mod1+Shift+n move container to workspace $ws_music
+bindsym Mod1+Shift+m move container to workspace $ws_search
 
 # Arrow swapping
 bindsym Mod1+Left workspace prev
