@@ -259,7 +259,7 @@ exec_always --no-startup-id bash -l ~/.scripts/background/vidbg.sh
 # Hotkeys
 bindsym $mod+Shift+u exec ~/.scripts/colors/colors.sh
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
-bindsym Mod1+Return exec firefox --new-window
+bindsym Mod1+Return exec firefox --new-window https://google.com
 
 # Move floating
 bindsym $mod+m mode "move" focus floating
