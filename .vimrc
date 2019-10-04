@@ -64,7 +64,8 @@ set statusline=
 "set statusline+=%#PmenuSel#
 "set statusline+=%{StatuslineGit()}
 "set statusline+=%#LineNr#
-set statusline+=%1*%n%*\ »\ %2*%f%*
+set statusline+=%1*%n%*\ »\ %{fnamemodify(v:this_session,':t')}\ »\ %2*%f%*
+"set statusline+=%1*%n%*\ \ %{fnamemodify(v:this_session,':t')}\ \ %2*%f%*
 "set statusline+=\ %m
 set statusline+=%=
 "set statusline+=%#CursorColumn#
