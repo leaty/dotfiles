@@ -3,9 +3,9 @@ monitor = ${env:MONITOR}
 width = 100%
 height = 30
 
+# Don't forget to change this (used in tray)
 background_color = #313842
-background_opacity = 99
-background = #${self.background_opacity}313842
+background = #99313842
 #background = #80ffffff
 #foreground = #ccffffff
 #foreground = #4c4c4c
