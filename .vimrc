@@ -78,7 +78,7 @@ set statusline+=%1*%n%*\ »\ %{fnamemodify(v:this_session,':t')}\ »\ %2*%f%*
 set statusline+=%=
 "set statusline+=%#CursorColumn#
 "set statusline+=\ %y
-"set statusline+=\ %{fugitive#statusline()}
+set statusline+=\ %2*%{fugitive#head(6)}%*\ «
 set statusline+=\ %3*%l,%c%*
 set statusline+=\ %4*%p%%%*
 
