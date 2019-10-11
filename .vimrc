@@ -11,12 +11,20 @@ if dein#load_state('~/.cache/dein')
 	call dein#begin('~/.cache/dein')
 
 	call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+	"Deoplete
 	call dein#add('Shougo/deoplete.nvim')
 	if !has('nvim')
 		call dein#add('roxma/nvim-yarp')
 		call dein#add('roxma/vim-hug-neovim-rpc')
 	endif
 	call dein#add('deoplete-plugins/deoplete-jedi')
+
+	"Ranger
+	call dein#add('francoiscabrol/ranger.vim')
+	if !has('nvim')
+		call dein#add('rbgrouleff/bclose.vim')
+	endif
 
 	"call dein#add('flazz/vim-colorschemes')
 	call dein#add('airblade/vim-gitgutter')
