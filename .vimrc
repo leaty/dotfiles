@@ -11,13 +11,14 @@ if dein#load_state('~/.cache/dein')
 	call dein#begin('~/.cache/dein')
 
 	call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+	"call dein#add('davidhalter/jedi-vim')
 	call dein#add('Shougo/deoplete.nvim')
 	if !has('nvim')
 		call dein#add('roxma/nvim-yarp')
 		call dein#add('roxma/vim-hug-neovim-rpc')
 	endif
+	call dein#add('deoplete-plugins/deoplete-jedi')
 
-	call dein#add('scrooloose/nerdtree')
 	"call dein#add('flazz/vim-colorschemes')
 	"call dein#add('airblade/vim-gitgutter') broken
 	call dein#add('tpope/vim-fugitive', {'on_cmd' : 'Gstatus'})
@@ -36,7 +37,7 @@ endif
 filetype plugin indent off
 syntax enable
 
-" Indentation
+"Indentation
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
@@ -111,6 +112,10 @@ let g:fzf_colors =
 	\ 'spinner': ['fg', 'Label'],
 	\ 'header':  ['fg', 'Comment'] }
 
+"Deoplete
+let g:deoplete#enable_at_startup = 1
+set completeopt-=preview
+
 "Line numbers
 set number relativenumber
 set nuw=1
@@ -159,7 +164,13 @@ nnoremap <silent> <C-f> :Rg .<CR>
 nnoremap <silent> <leader>s :Sessions<CR>
 nnoremap <leader>ns :Session<Space>
 
+"bind deoplete
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
 "bind open new vim or current buffer in new terminal emulator
 nnoremap <silent> <leader>t :call SplitTerm()<CR>
 nnoremap <silent> <leader>b :call SplitTerm(expand('%'))<CR>
+
+"bind split in same terminal
+"nnoremap <silent> <leader>w <CR>
 
