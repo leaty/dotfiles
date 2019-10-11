@@ -11,7 +11,6 @@ if dein#load_state('~/.cache/dein')
 	call dein#begin('~/.cache/dein')
 
 	call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-	"call dein#add('davidhalter/jedi-vim')
 	call dein#add('Shougo/deoplete.nvim')
 	if !has('nvim')
 		call dein#add('roxma/nvim-yarp')
@@ -20,8 +19,8 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('deoplete-plugins/deoplete-jedi')
 
 	"call dein#add('flazz/vim-colorschemes')
-	"call dein#add('airblade/vim-gitgutter') broken
-	call dein#add('tpope/vim-fugitive', {'on_cmd' : 'Gstatus'})
+	call dein#add('airblade/vim-gitgutter')
+	call dein#add('tpope/vim-fugitive')
 	call dein#add('junegunn/fzf.vim')
 	call dein#add('dominickng/fzf-session.vim')
 	
@@ -71,6 +70,7 @@ set statusline+=%1*%n%*\ »\ %{fnamemodify(v:this_session,':t')}\ »\ %2*%f%*
 set statusline+=%=
 "set statusline+=%#CursorColumn#
 "set statusline+=\ %y
+"set statusline+=\ %{fugitive#statusline()}
 set statusline+=\ %3*%l,%c%*
 set statusline+=\ %4*%p%%%*
 
@@ -115,6 +115,12 @@ let g:fzf_colors =
 "Deoplete
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
+
+"GitGutter
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+set updatetime=100
 
 "Line numbers
 set number relativenumber
@@ -166,6 +172,17 @@ nnoremap <leader>ns :Session<Space>
 
 "bind deoplete
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"bind git
+nmap <leader>gb :Gblame<cr>
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gc :Gcommit -v<cr>
+nmap <leader>ga :Git add -p<cr>
+nmap <leader>gm :Gcommit --amend<cr>
+nmap <leader>gp :Gpush<cr>
+nmap <leader>gd :Gdiff<cr>
+nmap <leader>gw :Gwrite<cr>
+nmap <leader>gr :Gread<cr>
 
 "bind open new vim or current buffer in new terminal emulator
 nnoremap <silent> <leader>t :call SplitTerm()<CR>
