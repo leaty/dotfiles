@@ -16,11 +16,11 @@ if dein#load_state('~/.cache/dein')
 		call dein#add('roxma/nvim-yarp')
 		call dein#add('roxma/vim-hug-neovim-rpc')
 	endif
+	call dein#add('deoplete-plugins/deoplete-jedi')
 
-	call dein#add('scrooloose/nerdtree')
 	"call dein#add('flazz/vim-colorschemes')
-	"call dein#add('airblade/vim-gitgutter') broken
-	call dein#add('tpope/vim-fugitive', {'on_cmd' : 'Gstatus'})
+	call dein#add('airblade/vim-gitgutter')
+	call dein#add('tpope/vim-fugitive')
 	call dein#add('junegunn/fzf.vim')
 	call dein#add('dominickng/fzf-session.vim')
 	
@@ -36,7 +36,7 @@ endif
 filetype plugin indent off
 syntax enable
 
-" Indentation
+"Indentation
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
@@ -70,6 +70,7 @@ set statusline+=%1*%n%*\ »\ %{fnamemodify(v:this_session,':t')}\ »\ %2*%f%*
 set statusline+=%=
 "set statusline+=%#CursorColumn#
 "set statusline+=\ %y
+"set statusline+=\ %{fugitive#statusline()}
 set statusline+=\ %3*%l,%c%*
 set statusline+=\ %4*%p%%%*
 
@@ -110,6 +111,16 @@ let g:fzf_colors =
 	\ 'marker':  ['fg', 'Keyword'],
 	\ 'spinner': ['fg', 'Label'],
 	\ 'header':  ['fg', 'Comment'] }
+
+"Deoplete
+let g:deoplete#enable_at_startup = 1
+set completeopt-=preview
+
+"GitGutter
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+set updatetime=100
 
 "Line numbers
 set number relativenumber
@@ -159,7 +170,24 @@ nnoremap <silent> <C-f> :Rg .<CR>
 nnoremap <silent> <leader>s :Sessions<CR>
 nnoremap <leader>ns :Session<Space>
 
+"bind deoplete
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"bind git
+nmap <leader>gb :Gblame<cr>
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gc :Gcommit -v<cr>
+nmap <leader>ga :Git add -p<cr>
+nmap <leader>gm :Gcommit --amend<cr>
+nmap <leader>gp :Gpush<cr>
+nmap <leader>gd :Gdiff<cr>
+nmap <leader>gw :Gwrite<cr>
+nmap <leader>gr :Gread<cr>
+
 "bind open new vim or current buffer in new terminal emulator
 nnoremap <silent> <leader>t :call SplitTerm()<CR>
 nnoremap <silent> <leader>b :call SplitTerm(expand('%'))<CR>
+
+"bind split in same terminal
+"nnoremap <silent> <leader>w <CR>
 
