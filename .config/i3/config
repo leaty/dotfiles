@@ -209,7 +209,7 @@ for_window [class=".*"] border pixel 0
 gaps inner 40
 mouse_warping none
 # resloved rounded corner
-border_radius 4
+#border_radius 4
 # colors
 #client.focused          #ffffff #ffffff #ffffff #ffffff   #ffffff
 #client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
