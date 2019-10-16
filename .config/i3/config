@@ -209,7 +209,7 @@ for_window [class=".*"] border pixel 0
 gaps inner 40
 mouse_warping none
 # resloved rounded corner
-border_radius 4
+#border_radius 4
 # colors
 #client.focused          #ffffff #ffffff #ffffff #ffffff   #ffffff
 #client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
@@ -269,7 +269,7 @@ exec_always --no-startup-id bash -l ~/.scripts/background/vidbg.sh
 # Hotkeys
 bindsym $mod+Shift+u exec ~/.scripts/colors/colors.sh
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
-bindsym Mod1+Return exec firefox --new-window https://google.com
+bindsym Mod1+Return exec firefox
 
 # Move floating
 bindsym $mod+m mode "move" focus floating
