@@ -8,7 +8,7 @@ a=(
 )
 
 # Read user config
-if [ -z "$1" ]; then
+if [ -n "$1" ]; then 
 	source $1
 fi
 
