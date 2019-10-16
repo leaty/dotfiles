@@ -204,9 +204,19 @@ bindsym $mod+r mode "resize"
 # My own settings
 # You can also use any non-zero value if you'd like to have a border
 # i3 gaps
+# class                 border  backgr. text    indicator child_border
 for_window [class=".*"] border pixel 0
 gaps inner 40
 mouse_warping none
+# resloved rounded corner
+#border_radius 4
+# colors
+#client.focused          #ffffff #ffffff #ffffff #ffffff   #ffffff
+#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+#client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#client.background       #ffffff
 
 set $mon_two HDMI-0
 set $mon_one DP-2
@@ -254,12 +264,13 @@ exec_always --no-startup-id bash -l ~/.scripts/polybar/polybar.sh
 exec_always --no-startup-id xset r rate 200 35
 #exec_always --no-startup-id ~/.scripts/background/bg.sh
 #exec_always --no-startup-id ~/.scripts/background/gifbg.sh
-exec_always --no-startup-id bash -l ~/.scripts/background/vidbg.sh
+exec_always --no-startup-id bash -l ~/.scripts/background/vidbg.sh ~/.config/wall/vid.conf
 
 # Hotkeys
 bindsym $mod+Shift+u exec ~/.scripts/colors/colors.sh
-bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
-bindsym Mod1+Return exec firefox --new-window https://google.com
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.png' -e 'mv $f ~/Pictures/'
+bindsym --release Shift+Print exec scrot -s '%Y-%m-%d-%s_screenshot_$wx$h.png' -e 'mv $f ~/Pictures/'
+bindsym Mod1+Return exec firefox
 
 # Move floating
 bindsym $mod+m mode "move" focus floating
