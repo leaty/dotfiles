@@ -1,11 +1,16 @@
 #!/bin/bash
 
-# Set options
+# Read default config
 o='xv'
 d=~/cloud/wall/vid
 a=(
 	'In-The-Snow-Anime-Girl-Live-Wallpaper.m4v'
 )
+
+# Read user config
+if [ -z "$1" ]; then
+	source $1
+fi
 
 # Kill previous instances
 pkill xwinwrap
