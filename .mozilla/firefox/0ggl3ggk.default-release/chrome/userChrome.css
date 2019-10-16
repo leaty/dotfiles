@@ -36,3 +36,8 @@ statuspanel[type="overLink"],
 :root:not([customizing]) #navigator-toolbox:not(:hover):not(:focus-within) #TabsToolbar {
   visibility: collapse;
 }
+
+#browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, 
+browser[type=content-primary],browser[type=content] > html {
+    background: #222425 !important
+}
