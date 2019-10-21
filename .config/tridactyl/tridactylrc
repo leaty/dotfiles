@@ -2,3 +2,5 @@ colors customquake
 bind D composite tabclose | tab #
 bind j scrollline 3
 bind k scrollline -3
+" autocmd DocStart ^http(s?)://localhost js setTimeout(function() { tri.excmds.fillcmdline("open"); }, 100)
+" vim: set filetype=vim:

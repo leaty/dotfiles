@@ -1,3 +1,5 @@
+include-file = ~/.config/polybar/config.focus
+
 [bar/top]
 monitor = ${env:MONITOR}
 width = 100%
