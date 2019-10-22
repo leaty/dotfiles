@@ -206,7 +206,6 @@ bindsym $mod+r mode "resize"
 # i3 gaps
 # class                 border  backgr. text    indicator child_border
 for_window [class=".*"] border pixel 0
-gaps inner 40
 mouse_warping none
 # resloved rounded corner
 #border_radius 4
@@ -259,12 +258,11 @@ exec --no-startup-id i3-msg 'workspace 5:chat; exec /usr/bin/discord'
 exec --no-startup-id i3-msg 'workspace 7:music; exec ~/.scripts/urxvt/exec ncmpcpp'
 
 # Glitter and diamonds
-exec_always --no-startup-id ~/.scripts/compton/compton.sh
-exec_always --no-startup-id bash -l ~/.scripts/polybar/polybar.sh
+exec_always --no-startup-id bash -l ~/.scripts/background/vidbg.sh ~/.config/wall/vid.conf
+exec_always --no-startup-id bash -l ~/.scripts/i3/mode.sh
 exec_always --no-startup-id xset r rate 200 35
 #exec_always --no-startup-id ~/.scripts/background/bg.sh
 #exec_always --no-startup-id ~/.scripts/background/gifbg.sh
-exec_always --no-startup-id bash -l ~/.scripts/background/vidbg.sh ~/.config/wall/vid.conf
 
 # Hotkeys
 bindsym $mod+Shift+u exec ~/.scripts/colors/colors.sh
@@ -330,7 +328,12 @@ bindsym --whole-window --border Mod1+Button4 workspace next
 bindsym Mod1+Tab workspace back_and_forth
 bindsym $mod+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
 
+# Lock
 bindsym $mod+l exec --no-startup-id i3lock-fancy -b=0x8
+
+# Modes
+bindsym $mod+Shift+f exec --no-startup-id bash -l ~/.scripts/i3/mode.focus.sh
+bindsym $mod+Shift+g exec --no-startup-id bash -l ~/.scripts/i3/mode.sh
 
 #bindsym $mod+Shift+Return move container to workspace $ws_term
 #bindsym $mod+Shift+a move container to workspace $ws_code
