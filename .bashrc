@@ -15,8 +15,8 @@ PATH=$PATH:~/.local/bin
 
 # Vars
 export TERM=xterm-256color
-#export TERM=screen-256color
 #export TERM=rxvt-unicode-256color
+#export TERM=screen-256color
 export EDITOR=nvim
 export SYSTEMD_EDITOR=nvim
 export RANGER_LOAD_DEFAULT_RC=false
