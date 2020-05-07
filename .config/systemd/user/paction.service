@@ -1,0 +1,11 @@
+[Unit]
+Description=Execute actions relative to process existance
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/usr/bin/paction
+
+[Install]
+WantedBy=default.target

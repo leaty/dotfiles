@@ -2,7 +2,8 @@
 
 action=$1
 card='alsa_output.pci-0000_0b_04.0'
-sink=$(pactl list sinks | grep "Name: $card." | awk '{print $2}')
+#sink=$(pactl list sinks | grep "Name: $card." | awk '{print $2}')
+sink=$(pactl info | grep 'Default Sink' | awk '{print $3};')
 
 case $action in
 	'up')

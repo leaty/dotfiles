@@ -31,6 +31,8 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('tpope/vim-fugitive')
 	call dein#add('junegunn/fzf.vim')
 	call dein#add('dominickng/fzf-session.vim')
+	call dein#add('neomake/neomake')
+	call dein#add('cespare/vim-toml')
 	
 	call dein#end()
 	call dein#save_state()
@@ -199,3 +201,17 @@ nnoremap <silent> <leader>b :call SplitTerm(expand('%'))<CR>
 "bind split in same terminal
 "nnoremap <silent> <leader>w <CR>
 
+"Neomake
+let g:neomake_open_list = 2
+"let g:neomake_rust_cargo_command = ['build']
+noremap <silent> <C-b> :Neomake! cargo<CR>
+
+augroup neomake_tests
+	au User NeomakeJobFinished call NeomakeRun(g:neomake_hook_context)
+augroup END
+
+function NeomakeRun(context)
+	if a:context.jobinfo.exit_code == 0
+		!cargo run
+	endif
+endfunction

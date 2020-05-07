@@ -1,25 +1,41 @@
 #!/bin/bash
-
-# Read default config
-o='xv'
-d=~/cloud/wall/vid
-a=(
-	'In-The-Snow-Anime-Girl-Live-Wallpaper.m4v'
-)
-
-# Read user config
-if [ -n "$1" ]; then 
-	source $1
-fi
+IFS=$'\n'
 
 # Kill previous instances
 pkill xwinwrap
-sleep 1
+#sleep 1
 
-# Start new instances
-x=0
-for v in ${a[@]}; do
-	xwinwrap -g ${SCREEN_X}x${SCREEN_Y}+$x+0 -ov -ni -s -nf -- mpv --vo=$o --no-audio --loop --wid WID $d/$v &
-	x=$((xpos+${SCREEN_X}));
+vo='xv'
+dir_config=~/.config/wall/vid/
+monitors=$(xrandr --listactivemonitors | grep -v Monitors)
+for monitor in $monitors; do
+	screen=$(echo ${monitor//:} | awk '{print $1}')
+	screen_x=$(echo $monitor | awk '{print $3}' | awk -F"/" '{print $1}')
+	screen_y=$(echo $monitor | awk '{print $3}' | awk -F"/" '{print $2}' | awk -F"x" '{print $2}')
+	screen_pos=$(echo $monitor | awk '{print $3}' | awk -F"/" '{print $3}' | sed 's/^[^+]*+//')
+
+	config="${dir_config}screen_$screen.conf"
+	if [ ! -f "$config" ]; then
+		echo "No config for screen $screen in $config."
+		exit
+	fi
+	
+	wallpaper=$(cat "$config")
+	wallpaper_img=~/.cache/wall/vidbg.$(basename "$wallpaper").png
+
+	if [ ! -f "$wallpaper_img" ]; then
+		~/.scripts/colors/vid2img.sh "$wallpaper" "$wallpaper_img" > /dev/null 2>&1
+	fi
+
+	echo Setting wallpaper.
+	echo - screen: $screen
+	echo - config: $config
+	echo - video: $wallpaper
+	echo - image: $wallpaper_img
+	echo - size: ${screen_x}x${screen_y}
+	echo - pos: $screen_pos
+
+	feh --bg-scale "$wallpaper_img"
+	xwinwrap -g ${screen_x}x${screen_y}+$screen_pos -ov -ni -s -nf -- mpv --vo=$vo --no-audio --loop -wid WID "$wallpaper" &
 done
 
