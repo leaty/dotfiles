@@ -61,6 +61,10 @@ bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+odiaeresis move right
 
+# scratchpad focused window
+bindsym $mod+minus move scratchpad
+bindsym $mod+plus scratchpad show
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -258,7 +262,7 @@ exec --no-startup-id i3-msg 'workspace 5:chat; exec /usr/bin/discord'
 exec --no-startup-id i3-msg 'workspace 7:music; exec ~/.scripts/urxvt/exec ncmpcpp'
 
 # Glitter and diamonds
-exec_always --no-startup-id bash -l ~/.scripts/background/vidbg.sh ~/.config/wall/vid.conf
+exec_always --no-startup-id bash -l ~/.scripts/background/vidbg.sh
 exec_always --no-startup-id bash -l ~/.scripts/i3/mode.sh
 exec_always --no-startup-id xset r rate 200 35
 #exec_always --no-startup-id ~/.scripts/background/bg.sh
@@ -284,7 +288,7 @@ mode "move" {
 }
 
 # Media keys
-bindsym $mod+Shift+a exec ~/.scripts/audio/audio-switch.sh
+bindsym $mod+Shift+a exec ~/.scripts/audio/audio-card-switch.sh
 bindsym XF86AudioRaiseVolume exec ~/.scripts/audio/audio-volume.sh up
 bindsym XF86AudioLowerVolume exec ~/.scripts/audio/audio-volume.sh down
 bindsym XF86AudioMute exec ~/.scripts/audio/audio-volume.sh mute
@@ -334,6 +338,12 @@ bindsym $mod+l exec --no-startup-id i3lock-fancy -b=0x8
 # Modes
 bindsym $mod+Shift+f exec --no-startup-id bash -l ~/.scripts/i3/mode.focus.sh
 bindsym $mod+Shift+g exec --no-startup-id bash -l ~/.scripts/i3/mode.sh
+
+# Background switcher
+bindsym $mod+Shift+n exec --no-startup-id bash -l ~/.scripts/background/vid.switch.sh ~/cloud/wall/vid/ next
+bindsym $mod+Shift+p exec --no-startup-id bash -l ~/.scripts/background/vid.switch.sh ~/cloud/wall/vid/ prev
+bindsym Mod1+$mod+Shift+n exec --no-startup-id bash -l ~/.scripts/colors/color.vid.switch.sh ~/cloud/wall/vid/ next
+bindsym Mod1+$mod+Shift+p exec --no-startup-id bash -l ~/.scripts/colors/color.vid.switch.sh ~/cloud/wall/vid/ prev
 
 #bindsym $mod+Shift+Return move container to workspace $ws_term
 #bindsym $mod+Shift+a move container to workspace $ws_code
