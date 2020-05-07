@@ -65,6 +65,12 @@ xset r rate 200 35
 #xmodmap -e "clear lock"
 #xmodmap -e "keysym Caps_Lock = Escape"
 
+# Load nvidia-settings
+nvidia-settings --load-config-only
+
+# Start paction
+systemctl --user start paction
+
 # Set up displays
 #~/.scripts/xorg/xrandr.sh
 
