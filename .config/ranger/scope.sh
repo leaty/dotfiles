@@ -39,14 +39,18 @@ HIGHLIGHT_TABWIDTH=8
 HIGHLIGHT_STYLE='pablo'
 PYGMENTIZE_STYLE='autumn'
 
+size=$(stat -c%s "$path") 
+
 
 handle_extension() {
     case "${FILE_EXTENSION_LOWER}" in
         # Archive
         a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
         rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)
-            atool --list -- "${FILE_PATH}" && exit 5
-            bsdtar --list --file "${FILE_PATH}" && exit 5
+			if [ $size -le 104857600 ]; then
+				atool --list -- "${FILE_PATH}" && exit 5
+				bsdtar --list --file "${FILE_PATH}" && exit 5
+			fi
             exit 1;;
         rar)
             # Avoid password prompt by providing empty password

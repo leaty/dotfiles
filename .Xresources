@@ -25,7 +25,8 @@ URxvt*scrollBar: false
 URxvt.cursorBlink: 1
 URxvt.cursorUnderline: 1
 URxvt*depth: 32
-URxvt*termName: rxvt-unicode-256color
+URxvt*termName: xterm-256color
+!URxvt*termName: rxvt-unicode-256color
 !URxvt*termName: screen-256color
 URxvt*internalBorder: 20
 
@@ -61,6 +62,10 @@ URxvt*italicFont:\
 
 !Old
 !URxvt.letterSpace: -1
+URxvt.keysym.Home: \033OH
+URxvt.keysym.End: \033OF
+URxvt.keysym.KP_Home: \033OH
+URxvt.keysym.KP_End: \033OF
 !URxvt.keysym.Home: \033[1~
 !URxvt.keysym.End: \033[4~
 !URxvt.keysym.KP_Home: \033[1~

@@ -13,4 +13,4 @@ fi
 vid=$1
 img=$2
 
-ffmpeg -ss 00:02 -i $vid -frames:v 1 $img
+ffmpeg -ss 00:02 -i "$vid" -frames:v 1 "$img"
