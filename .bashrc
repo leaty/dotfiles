@@ -46,6 +46,12 @@ code() {
 	fi
 }
 
+# SSH alias providing personal bashrc on all (non-chained) ssh remotes
+# Looks for ~/.ssh/bashrc by default
+function ssh() {
+	/usr/bin/ssh -t $@ "bash --rcfile <(cat ~/.bashrc; echo '$(cat ~/.ssh/bashrc | base64)' | base64 --decode)"
+}
+
 # Pywal
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
