@@ -25,6 +25,7 @@ export FZF_DEFAULT_OPTS='
 	--color bg:-1
 	--color bg+:-1
 	--color prompt:-1
+	--bind ctrl-space:toggle-sort
 '
 
 alias ls='ls --color=auto --group-directories-first'
