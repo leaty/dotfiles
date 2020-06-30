@@ -25,7 +25,10 @@ export FZF_DEFAULT_OPTS='
 	--color bg:-1
 	--color bg+:-1
 	--color prompt:-1
+	--bind ctrl-space:toggle-sort
 '
+
+export XZ_OPT="-T8"
 
 alias ls='ls --color=auto --group-directories-first'
 alias db1='mycli --defaults-file=$HOME/.mysql/db1.conf'
