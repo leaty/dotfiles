@@ -74,6 +74,9 @@ systemctl --user start paction
 # Set up displays
 #~/.scripts/xorg/xrandr.sh
 
+# Turn off screensaver
+xset -dpms s off
+
 # start i3
 if [ -f /usr/bin/i3 ]; then
 	exec i3
