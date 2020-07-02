@@ -61,6 +61,7 @@ wal -R
 
 # Set keyboard
 setxkbmap -layout se
+setxkbmap -option caps:escape
 xset r rate 200 35
 #xmodmap -e "clear lock"
 #xmodmap -e "keysym Caps_Lock = Escape"
