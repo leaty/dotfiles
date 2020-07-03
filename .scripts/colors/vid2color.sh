@@ -26,9 +26,9 @@ image=$(mktemp -u /tmp/vid2color.XXXXXXX.png)
 ~/.scripts/colors/vid2img.sh "$video" "$image" > /dev/null 2>&1
 
 if [ $background == 0 ]; then
-	wal -ni "$image" -a $opacity > /dev/null 2>&1
+	wal -nei "$image" -a $opacity > /dev/null 2>&1
 else
-	wal -ni "$image" -a $opacity -b $background > /dev/null 2>&1
+	wal -nei "$image" -a $opacity -b $background > /dev/null 2>&1
 fi
 
 rm "$image"
