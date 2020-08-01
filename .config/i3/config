@@ -44,9 +44,10 @@ bindsym $mod+d exec --no-startup-id "rofi -show"
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-#bindsym $mod+l focus up
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 bindsym $mod+odiaeresis focus right
 
 # alternatively, you can use the cursor keys:
@@ -56,9 +57,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 bindsym $mod+Shift+odiaeresis move right
 
 # scratchpad focused window
@@ -71,11 +73,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
+# split in vertical/horizontal orientation
+bindsym $mod+less split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -333,7 +332,7 @@ bindsym Mod1+Tab workspace back_and_forth
 bindsym $mod+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
 
 # Lock
-bindsym $mod+l exec --no-startup-id i3lock-fancy -b=0x8
+bindsym $mod+Mod1+Shift+l exec --no-startup-id i3lock-fancy -b=0x8
 
 # Modes
 bindsym $mod+Shift+f exec --no-startup-id bash -l ~/.scripts/i3/mode.focus.sh
