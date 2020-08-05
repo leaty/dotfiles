@@ -72,6 +72,9 @@ nvidia-settings --load-config-only
 # Start paction
 systemctl --user start paction
 
+# Start rkeep
+systemctl --user start rkeep
+
 # Set up displays
 #~/.scripts/xorg/xrandr.sh
 
