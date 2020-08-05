@@ -272,6 +272,8 @@ bindsym $mod+Shift+u exec ~/.scripts/colors/colors.sh
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.png' -e 'mv $f ~/Pictures/'
 bindsym --release Shift+Print exec scrot -s '%Y-%m-%d-%s_screenshot_$wx$h.png' -e 'mv $f ~/Pictures/'
 bindsym Mod1+Return exec firefox
+bindsym $mod+p exec rkeep-client -s keys
+bindsym $mod+o exec rkeep-client -s vizzit
 
 # Move floating
 bindsym $mod+m mode "move" focus floating
