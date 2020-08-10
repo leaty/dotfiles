@@ -8,13 +8,15 @@ fi
 dir=$1
 vo='vdpau'
 
-for f in $dir/*
+for f in $(find $dir -type f -printf "%T@ %p\n" | sort -nr | awk '{sub($1 OFS, ""); print $0}')
 do
 	echo "$f"
 	pkill -9 xwinwrap
 	pkill mpv
 	sleep 0.2
-	xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --vo=$vo --mute=yes --loop --wid WID "$f" &
-	xwinwrap -g 1920x1080+1920+0 -ov -ni -s -nf -- mpv --vo=$vo --mute=yes --loop --wid WID "$f" &
+	xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --vo=$vo --no-audio --loop -wid WID "$f" &
 	sleep 5
 done
+
+
+

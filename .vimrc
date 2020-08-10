@@ -31,12 +31,17 @@ if dein#load_state('~/.cache/dein')
 
 	"call dein#add('flazz/vim-colorschemes')
 	call dein#add('airblade/vim-gitgutter')
-	call dein#add('tpope/vim-fugitive')
-	call dein#add('junegunn/fzf.vim')
+	call dein#add('cespare/vim-toml')
+	call dein#add('christoomey/vim-sort-motion')
 	call dein#add('dominickng/fzf-session.vim')
+	call dein#add('inkarkat/vim-ReplaceWithRegister')
+	call dein#add('junegunn/fzf.vim')
 	call dein#add('neomake/neomake')
 	call dein#add('rust-lang/rust.vim')
-	call dein#add('cespare/vim-toml')
+	call dein#add('tpope/vim-commentary')
+	call dein#add('tpope/vim-fugitive')
+	call dein#add('tpope/vim-repeat')
+	call dein#add('tpope/vim-surround')
 	
 	call dein#end()
 	call dein#save_state()
@@ -63,10 +68,10 @@ set shortmess+=O
 let s:spinner_index = 0
 let s:active_spinners = 0
 "let s:spinner_states = ['|', '/', '--', '\', '|', '/', '--', '\']
-"let s:spinner_states = ['ｦ','ｧ','ｨ','ｩ','ｪ','ｫ','ｬ','ｭ','ｮ','ｯ','ｱ','ｲ','ｳ','ｴ','ｵ','ｶ','ｷ','ｸ','ｹ','ｺ','ｻ','ｼ','ｽ','ｾ','ｿ','ﾀ','ﾁ','ﾂ','ﾃ','ﾄ','ﾅ','ﾆ','ﾇ','ﾈ','ﾉ','ﾊ','ﾋ','ﾌ','ﾍ','ﾎ','ﾏ','ﾐ','ﾑ','ﾒ','ﾓ','ﾔ','ﾕ','ﾖ','ﾗ','ﾘ','ﾙ','ﾚ','ﾛ','ﾜ','ﾝ']
+let s:spinner_states = ['ｦ','ｧ','ｨ','ｩ','ｪ','ｫ','ｬ','ｭ','ｮ','ｯ','ｱ','ｲ','ｳ','ｴ','ｵ','ｶ','ｷ','ｸ','ｹ','ｺ','ｻ','ｼ','ｽ','ｾ','ｿ','ﾀ','ﾁ','ﾂ','ﾃ','ﾄ','ﾅ','ﾆ','ﾇ','ﾈ','ﾉ','ﾊ','ﾋ','ﾌ','ﾍ','ﾎ','ﾏ','ﾐ','ﾑ','ﾒ','ﾓ','ﾔ','ﾕ','ﾖ','ﾗ','ﾘ','ﾙ','ﾚ','ﾛ','ﾜ','ﾝ']
 "let s:spinner_states = ['⠋','⠙','⠹','⠸','⠼','⠴','⠦','⠧','⠇','⠏']
 "let s:spinner_states = ['⠁','⠉','⠙','⠚','⠒','⠂','⠂','⠒','⠲','⠴','⠤','⠄','⠄','⠤','⠴','⠲','⠒','⠂','⠂','⠒','⠚','⠙','⠉','⠁']
-let s:spinner_states = ['⠈','⠉','⠋','⠓','⠒','⠐','⠐','⠒','⠖','⠦','⠤','⠠','⠠','⠤','⠦','⠖','⠒','⠐','⠐','⠒','⠓','⠋','⠉','⠈']
+"let s:spinner_states = ['⠈','⠉','⠋','⠓','⠒','⠐','⠐','⠒','⠖','⠦','⠤','⠠','⠠','⠤','⠦','⠖','⠒','⠐','⠐','⠒','⠓','⠋','⠉','⠈']
 "let s:spinner_states = ['◴','◷','◶','◵','◴','◷','◶','◵','◴','◷','◶','◵','◴','◷','◶','◵']
 "let s:spinner_states = ['┤', '┘', '┴', '└', '├', '┌', '┬', '┐']
 "let s:spinner_states = ['←', '↖', '↑', '↗', '→', '↘', '↓', '↙']
@@ -294,3 +299,13 @@ function NeomakeRun(context)
 		!cargo run
 	endif
 endfunction
+
+" Unmap arrow keys for navigation temporarily
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>

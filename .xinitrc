@@ -61,6 +61,7 @@ wal -R
 
 # Set keyboard
 setxkbmap -layout se
+setxkbmap -option caps:swapescape
 xset r rate 200 35
 #xmodmap -e "clear lock"
 #xmodmap -e "keysym Caps_Lock = Escape"
@@ -71,8 +72,14 @@ nvidia-settings --load-config-only
 # Start paction
 systemctl --user start paction
 
+# Start rkeep
+systemctl --user start rkeep
+
 # Set up displays
 #~/.scripts/xorg/xrandr.sh
+
+# Turn off screensaver
+xset -dpms s off
 
 # start i3
 if [ -f /usr/bin/i3 ]; then
