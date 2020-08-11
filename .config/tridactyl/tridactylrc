@@ -2,5 +2,13 @@ colors customquake
 bind D composite tabclose | tab #
 bind j scrollline 3
 bind k scrollline -3
+
+guiset_quiet tabstoolbar show
+guiset_quiet tabs autohide
+guiset_quiet navbar autohide
+guiset_quiet hoverlink left
+guiset_quiet statuspanel left
+guiset_quiet gui none
+
 " autocmd DocStart ^http(s?)://localhost js setTimeout(function() { tri.excmds.fillcmdline("open"); }, 100)
 " vim: set filetype=vim:

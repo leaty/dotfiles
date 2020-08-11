@@ -4,7 +4,7 @@ width = 100%
 height = 32
 bottom = true
 
-background = #993e2552
+background = #CC313842
 foreground = #ffffff
 
 line-color = ${bar/bottom.background}
@@ -29,7 +29,7 @@ height = ${bar/barfocus.height}
 bottom = ${bar/barfocus.bottom}
 
 foreground = ${bar/barfocus.foreground}
-background = #992e2238
+background = #CC313842
 
 line-color = ${bar/barfocus.background}
 line-size = 16
