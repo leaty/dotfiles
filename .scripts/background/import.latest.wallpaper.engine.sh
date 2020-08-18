@@ -19,10 +19,20 @@ case $choice in
 	* ) echo "Bye."; exit;;
 esac
 
+# Make sure wallpaper does not exist
+if [ -f "$destination$video_name" ]; then
+	echo "WARNING: A wallpaper of the same name exists!"
+fi
+
 # Ask for rename
 read -p "Rename? (optional): " name
 if [ ! -z $name ]; then
-	destination="$import_dir$name"
+	if [ -f "$destination$name" ]; then
+		echo "ERROR: A wallpaper of the same name exists!"
+		exit 1
+	fi
+
+	destination="$destination$name"
 fi
 
 # Import
