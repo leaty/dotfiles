@@ -4,6 +4,9 @@ if &compatible | set nocompatible | endif
 " Disable intro message
 set shortmess=I
 
+" Fix cmd height
+set cmdheight=2
+
 " Set <leader>
 let mapleader=','
 
