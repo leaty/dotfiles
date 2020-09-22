@@ -5,7 +5,7 @@ IFS=$'\n'
 pkill xwinwrap
 #sleep 1
 
-vo='xv'
+vo='x11'
 dir_config=~/.config/wall/vid/
 monitors=$(xrandr --listactivemonitors | grep -v Monitors)
 for monitor in $monitors; do
