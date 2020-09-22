@@ -334,7 +334,7 @@ bindsym Mod1+Tab workspace back_and_forth
 bindsym $mod+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
 
 # Lock
-bindsym $mod+Mod1+Shift+l exec --no-startup-id i3lock-fancy -b=0x8
+bindsym $mod+Mod1+Shift+l exec --no-startup-id i3lock-fancy-dualmonitor
 
 # Modes
 bindsym $mod+Shift+f exec --no-startup-id bash -l ~/.scripts/i3/mode.focus.sh
