@@ -2,10 +2,10 @@
 if &compatible | set nocompatible | endif
 
 " Disable intro message
-set shortmess=I
+set shortmess=Ia
 
 " Fix cmd height
-set cmdheight=2
+"set cmdheight=2
 
 " Set <leader>
 let mapleader=','
@@ -43,8 +43,7 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('rust-lang/rust.vim')
 	call dein#add('tpope/vim-commentary')
 	call dein#add('tpope/vim-fugitive')
-	call dein#add('tpope/vim-repeat')
-	call dein#add('tpope/vim-surround')
+	call dein#add('machakann/vim-sandwich')
 	
 	call dein#end()
 	call dein#save_state()
@@ -55,7 +54,7 @@ if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-filetype plugin indent off
+filetype plugin indent on
 syntax enable
 
 "Indentation
@@ -129,6 +128,7 @@ hi StatusLine cterm=NONE
 hi StatusLineNC cterm=NONE
 hi VertSplit cterm=NONE
 hi CursorLine cterm=NONE
+hi SignColumn ctermbg=NONE
 "hi CursorColumn cterm=NONE guibg=NONE
 
 "Statusline
@@ -209,6 +209,13 @@ function! Run() abort
 		endif
 	endif
 endfunction
+
+"RustFmt
+let g:rustfmt_autosave = 1
+
+"Sandwich
+runtime macros/sandwich/keymap/surround.vim
+call operator#sandwich#set('all', 'all', 'highlight', 0)
 
 "GitGutter
 highlight GitGutterAdd    guifg=#009900 ctermfg=2
