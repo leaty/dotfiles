@@ -2,10 +2,10 @@
 if &compatible | set nocompatible | endif
 
 " Disable intro message
-set shortmess=I
+set shortmess=Ia
 
 " Fix cmd height
-set cmdheight=2
+"set cmdheight=2
 
 " Set <leader>
 let mapleader=','
@@ -54,7 +54,7 @@ if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-filetype plugin indent off
+filetype plugin indent on
 syntax enable
 
 "Indentation
