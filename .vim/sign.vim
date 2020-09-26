@@ -1,0 +1,1 @@
+hi SignColumn ctermbg=NONE
