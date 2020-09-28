@@ -3,7 +3,7 @@ let mapleader=','
 
 "Keybinds
 
-"bind * to stay on same result
+"rebind * to stay on same result
 nnoremap * *``
 
 "bind { for auto ending }
@@ -16,6 +16,10 @@ nnoremap <silent> <A-k> :m .-2<CR>==
 "inoremap <silent> <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <silent> <A-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <A-k> :m '<-2<CR>gv=gv
+
+"bind move argument left/right
+nnoremap <silent> <A-h> :SidewaysLeft<CR>
+nnoremap <silent> <A-l> :SidewaysRight<CR>
 
 "bind save
 noremap <silent> <C-s> :w<CR>
@@ -60,7 +64,7 @@ nnoremap <silent> <leader>b :call SplitTerm(expand('%'))<CR>
 "bind split in same terminal
 "nnoremap <silent> <leader>w <CR>
 
-" Unmap arrow keys for navigation temporarily
+"Unmap arrow keys for navigation temporarily
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
@@ -69,3 +73,22 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+
+
+"Map closing tags
+"inoremap {<CR> {<CR>}<Esc>ko
+"inoremap [<CR> [<CR>]<Esc>ko
+"inoremap (<CR> (<CR>)<Esc>ko
+
+"inoremap {<space> {}<Esc>i
+"inoremap [<space> []<Esc>i
+"inoremap (<space> ()<Esc>i
+"inoremap "<space> ""<Esc>i
+"inoremap '<space> ''<Esc>i
+
+"inoremap {{ {}<Esc>i
+"inoremap [[ []<Esc>i
+"inoremap (( ()<Esc>i
+"inoremap << <><Esc>i
+"inoremap "" ""<Esc>i
+"inoremap '' ''<Esc>i
