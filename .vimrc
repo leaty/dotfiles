@@ -57,6 +57,7 @@ source ~/.vim/plug.fugitive.vim
 source ~/.vim/plug.sandwich.vim
 source ~/.vim/plug.deoplete.vim
 source ~/.vim/plug.rust.vim
+source ~/.vim/plug.ale.vim
 source ~/.vim/binds.vim
 
 "Enable syntax
