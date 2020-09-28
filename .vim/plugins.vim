@@ -33,6 +33,7 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('tpope/vim-fugitive')
 	call dein#add('machakann/vim-sandwich')
 	call dein#add('AndrewRadev/sideways.vim')
+	call dein#add('dense-analysis/ale')
 	
 	call dein#end()
 	call dein#save_state()
