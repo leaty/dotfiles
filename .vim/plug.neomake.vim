@@ -1,5 +1,8 @@
 let g:neomake_open_list = 2
 let g:neomake_rust_cargo_command = ['build']
+let g:neomake_virtualtext_current_error = 0
+let g:neomake_place_signs = 0
+let g:neomake_highlight_columns = 0
 
 "Neomake run program if success
 function! Run() abort
