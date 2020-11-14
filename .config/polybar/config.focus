@@ -3,8 +3,7 @@ monitor = ${env:MONITOR}
 width = 100%
 height = 37
 bottom = true
-
-background = #CC39424f
+background = #99262626
 foreground = #ffffff
 
 line-color = ${bar/bottom.background}
