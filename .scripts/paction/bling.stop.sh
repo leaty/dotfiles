@@ -1,4 +1,4 @@
 #!/bin/bash
 
-pkill compton
+pkill -f "picom -b"
 pkill xwinwrap
