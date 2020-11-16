@@ -58,8 +58,11 @@ nmap <leader>gw :Gwrite<cr>
 nmap <leader>gr :Gread<cr>
 
 "bind open new vim or current buffer in new terminal emulator
-nnoremap <silent> <leader>t :call SplitTerm()<CR>
+nnoremap <silent> <leader>v :call SplitTerm()<CR>
 nnoremap <silent> <leader>b :call SplitTerm(expand('%'))<CR>
+
+"bind open new terminal
+nnoremap <silent> <leader>t :call jobstart('nohup urxvt -e bash --init-file <(echo "source ~/.bashrc;cd '.getcwd().'") > /dev/null 2>&1 &')<CR>
 
 "bind split in same terminal
 "nnoremap <silent> <leader>w <CR>
