@@ -57,7 +57,7 @@ code() {
 
 # SSH alias providing personal bashrc on all (non-chained) ssh remotes
 # Looks for ~/.ssh/bashrc by default
-function ssh() {
+ssh() {
 	/usr/bin/ssh -t $@ "bash --rcfile <(cat ~/.bashrc; echo '$(cat ~/.ssh/bashrc | base64)' | base64 --decode)"
 }
 
