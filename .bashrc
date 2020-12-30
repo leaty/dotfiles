@@ -11,7 +11,7 @@ export SCREEN_Y=1440
 [[ $- != *i* ]] && return
 
 PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
-PATH=$PATH:~/.local/bin
+PATH=$PATH:~/.local/bin:~/.cargo/bin
 
 # Vars
 export CARGO_TARGET_DIR=_bin
@@ -31,10 +31,15 @@ export FZF_DEFAULT_OPTS='
 
 export XZ_OPT="-T8"
 
+alias lgb='goobook -c ~/.goobook/leaty'
+alias vgb='goobook -c ~/.goobook/vizzit'
+alias lm='neomutt -F ~/.mutt/leaty'
+alias vm='neomutt -F ~/.mutt/vizzit'
 alias ls='ls --color=auto --group-directories-first'
-alias db1='mycli --defaults-file=$HOME/.mysql/db1.conf'
+alias db1='LESS=-SRXF mycli --defaults-file=$HOME/.mysql/db1.conf'
+alias tag1='LESS=-SRXF mycli --defaults-file=$HOME/.mysql/tag1.conf'
+alias tag2='LESS=-SRXF mycli --defaults-file=$HOME/.mysql/tag2.conf'
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
-alias vbg='xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv --vo=vdpau --mute=yes --loop --wid WID'
 alias ccat='vimcat'
 alias vim='nvim'
 alias svim='sudoedit'
@@ -52,7 +57,7 @@ code() {
 
 # SSH alias providing personal bashrc on all (non-chained) ssh remotes
 # Looks for ~/.ssh/bashrc by default
-function ssh() {
+ssh() {
 	/usr/bin/ssh -t $@ "bash --rcfile <(cat ~/.bashrc; echo '$(cat ~/.ssh/bashrc | base64)' | base64 --decode)"
 }
 

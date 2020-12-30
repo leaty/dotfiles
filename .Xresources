@@ -41,6 +41,12 @@ URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
 
 !Font
+!Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintfull
+
 URxvt*font:\
 	xft:$font1:size=$font_size,\
 	xft:$font2:size=$font_size,\

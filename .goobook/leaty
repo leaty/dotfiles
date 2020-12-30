@@ -1,0 +1,6 @@
+[DEFAULT]
+oauth_db_filename: ~/.goobook/leaty.d/auth
+cache_filename: ~/.goobook/leaty.d/cache
+cache_expiry_hours: 24
+filter_groupless_contacts: yes
+

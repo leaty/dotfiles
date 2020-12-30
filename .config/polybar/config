@@ -232,6 +232,7 @@ ws-icon-4 = 5:chat; 
 ;ws-icon-3 = 4:chat; 
 ws-icon-5 = 6:game; 
 ws-icon-6 = 7:music; ﱘ
+ws-icon-7 = 8:mail; 
 ;ws-icon-5 = 6:music; 
 ws-icon-default = " "
 

@@ -1,0 +1,6 @@
+[DEFAULT]
+oauth_db_filename: ~/.goobook/vizzit.d/auth
+cache_filename: ~/.goobook/vizzit.d/cache
+cache_expiry_hours: 24
+filter_groupless_contacts: yes
+
