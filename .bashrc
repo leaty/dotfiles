@@ -31,6 +31,10 @@ export FZF_DEFAULT_OPTS='
 
 export XZ_OPT="-T8"
 
+alias lgb='goobook -c ~/.goobook/leaty'
+alias vgb='goobook -c ~/.goobook/vizzit'
+alias lm='neomutt -F ~/.mutt/leaty'
+alias vm='neomutt -F ~/.mutt/vizzit'
 alias ls='ls --color=auto --group-directories-first'
 alias db1='mycli --defaults-file=$HOME/.mysql/db1.conf'
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
