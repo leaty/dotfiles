@@ -1,2 +1,2 @@
 [pycodestyle]
-ignore=W191,E101,E111,E128
+ignore=W191,E101,E111,E128,E501
