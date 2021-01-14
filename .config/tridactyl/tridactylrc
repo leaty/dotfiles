@@ -1,4 +1,20 @@
+" Custom theme
 colors customquake
+
+" After close, return to last visited tab
 bind D composite tabclose | tab #
+
+" Scroll values
 bind j scrollline 5
 bind k scrollline -5
+
+"
+" Hides GUI fully, but enables tabs and navbar on ctrl+l
+" Run this once manually or uncomment, then re-comment,
+" otherwise it writes to userChrome.css on each startup
+"
+"guiset gui none
+"guiset gui navbar always
+"guiset gui tabs autohide
+
+" vim: set filetype=vim:
