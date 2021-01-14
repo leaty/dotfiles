@@ -3,3 +3,5 @@
 	name = leaty
 [push]
 	default = current
+[pull]
+	rebase = false
