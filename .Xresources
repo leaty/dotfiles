@@ -84,6 +84,3 @@ URxvt.keysym.KP_End: \033OF
 !urxvt*shading: 70
 !URxvt.font: xft:HackNerdFont:size=13
 !Xcursor.size: 60
-
-! Colors file
-#include ".Xcolors"
