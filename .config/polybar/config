@@ -325,7 +325,7 @@ type = internal/cpu
 interval = 0.5
 format = <label>
 #label = CPU %percentage%%
-label = CPU %{F#99}%percentage%%%{F-}
+label = CPU %{F#fff}%percentage%%%{F-}
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 2
@@ -354,13 +354,13 @@ ramp-coreload-7-foreground = #ff5555
 
 [module/date]
 type = internal/date
-date =   %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
+date =   %%{F#fff}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
 date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
 
 [module/memory]
 type = internal/memory
 format = <label>
-label = RAM %{F#99}%percentage_used%%%{F-}
+label = RAM %{F#fff}%percentage_used%%%{F-}
 
 bar-used-width = 30
 bar-used-foreground-0 = #aaff77
@@ -395,7 +395,7 @@ icon-random = 列
 icon-repeat = 凌
 ;icon-repeat = 
 
-toggle-on-foreground =
+toggle-on-foreground = #fff
 toggle-off-foreground = #55
 
 bar-progress-width = 10
@@ -496,7 +496,7 @@ menu-0-2-exec = systemctl poweroff
 [module/clock]
 type = internal/date
 interval = 2
-date = %%{F#999}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
+date = %%{F#fff}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
 
 ; vim:ft=dosini
 
