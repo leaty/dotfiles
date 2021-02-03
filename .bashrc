@@ -55,11 +55,13 @@ code() {
 	fi
 }
 
-# SSH alias providing personal bashrc on all (non-chained) ssh remotes
-# Looks for ~/.ssh/bashrc by default
-ssh() {
-	/usr/bin/ssh -t $@ "bash --rcfile <(cat ~/.bashrc; echo '$(cat ~/.ssh/bashrc | base64)' | base64 --decode)"
-}
+# SAMESHELL
+SAMESHELL=$(cat ~/.config/sameshell/bashrc | base64)
+SAMESHELL_REAL="~/.bashrc"
+SAMESHELL_CMD="bash --rcfile <(cat $SAMESHELL_REAL; echo \"SAMESHELL='$SAMESHELL'\"; echo '. <(echo \"\$SAMESHELL\" | base64 --decode)')"
+zh() { /usr/bin/ssh -t $@ "$SAMESHELL_CMD"; }
+zo() { /usr/bin/sudo $@ --session-command "$SAMESHELL_CMD"; }
+zu() { /usr/bin/su $@ --session-command "$SAMESHELL_CMD"; }
 
 # Pywal
 # Import colorscheme from 'wal' asynchronously
