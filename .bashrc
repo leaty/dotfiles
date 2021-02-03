@@ -56,7 +56,7 @@ code() {
 }
 
 # SAMESHELL
-SAMESHELL=$(cat ~/.config/sameshell/bashrc | base64)
+SAMESHELL=$(cat ~/.config/sameshell/bashrc | sed '/^#/d' | base64)
 SAMESHELL_REAL="~/.bashrc"
 SAMESHELL_CMD="bash --rcfile <(cat $SAMESHELL_REAL; echo \"SAMESHELL='$SAMESHELL'\"; echo '. <(echo \"\$SAMESHELL\" | base64 --decode)')"
 zh() { /usr/bin/ssh -t $@ "$SAMESHELL_CMD"; }
