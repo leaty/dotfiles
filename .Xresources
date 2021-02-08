@@ -42,6 +42,7 @@ URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 !Keyboard select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keyboard-select.clipboard: true
 
 !Font
 !Xft.dpi: 96
