@@ -14,6 +14,7 @@ PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31
 PATH=$PATH:~/.local/bin:~/.cargo/bin
 
 # Vars
+export CARGO_NET_GIT_FETCH_WITH_CLI=true
 export CARGO_TARGET_DIR=_bin
 export TERM=xterm-256color
 #export TERM=rxvt-unicode-256color
