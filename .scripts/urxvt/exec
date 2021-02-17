@@ -1,5 +1,6 @@
 #!/bin/bash
 
-# Ensures bash profile gets loaded before starting
-# Also exits urxvt after closing
-urxvt -e bash --init-file <(echo "source ~/.bashrc;"$@";exit")
+# Used for starting terminal apps in urxvt directly
+# It ensures bash profile gets loaded before starting
+# May be unable to support non-quotable args such as --some-arg.
+urxvt -e bash -ci "$*"
