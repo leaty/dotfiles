@@ -1,5 +1,4 @@
 [Default Applications]
-inode/directory=ranger.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/ftp=firefox.desktop
@@ -12,19 +11,8 @@ application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 x-scheme-handler/msteams=teams.desktop
-
-[Added Associations]
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
-x-scheme-handler/ftp=firefox.desktop;
-x-scheme-handler/chrome=firefox.desktop;
-text/html=firefox.desktop;
-application/x-extension-htm=firefox.desktop;
-application/x-extension-html=firefox.desktop;
-application/x-extension-shtml=firefox.desktop;
-application/xhtml+xml=firefox.desktop;
-application/x-extension-xhtml=firefox.desktop;
-application/x-extension-xht=firefox.desktop;
-image/png=org.gnome.eog.desktop;
-image/jpeg=org.gnome.eog.desktop;
+inode/directory=ranger.desktop;
+text/plain=nvim.desktop;
+image/png=feh.desktop;
+image/jpeg=feh.desktop;
 application/pdf=org.gnome.Evince.desktop;
