@@ -3,6 +3,9 @@ let mapleader=','
 
 "Keybinds
 
+"bind clear highlight
+nnoremap <silent> <ESC> :noh<CR>
+
 "rebind * to stay on same result
 nnoremap * *``
 
