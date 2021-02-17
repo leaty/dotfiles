@@ -19,6 +19,14 @@ bind N findnext -1
 " Bind clearsearchhighlight
 bind --mode=normal <Esc> noh
 
+" Bind <C-m/j> as clearsearchhighlight and Return
+" Allows clicking on anything marked using <C-m/j>, e.g. search matches
+" Allows using <C-m/j> instead of Return in input mode
+bind <C-m> composite noh | exclaim_quiet xdotool keyup Ctrl && xdotool key Return
+bind --mode=input <C-m> composite noh | exclaim_quiet xdotool keyup Ctrl && xdotool key Return
+bind <C-j> composite noh | exclaim_quiet xdotool keyup Ctrl && xdotool key Return
+bind --mode=input <C-j> composite noh | exclaim_quiet xdotool keyup Ctrl && xdotool key Return
+
 "
 " Hides GUI fully, but enables tabs and navbar on ctrl+l
 " Run this once manually or uncomment, then re-comment,
