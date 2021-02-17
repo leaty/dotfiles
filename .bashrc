@@ -19,7 +19,6 @@ export CARGO_TARGET_DIR=_bin
 export TERM=xterm-256color
 #export TERM=rxvt-unicode-256color
 #export TERM=screen-256color
-export TERMINAL="urxvt -e bash -ci"
 export BROWSER=firefox
 export EDITOR=nvim
 export SYSTEMD_EDITOR=nvim
