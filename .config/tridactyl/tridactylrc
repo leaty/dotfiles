@@ -15,7 +15,7 @@ bind n findnext 1
 bind N findnext -1
 
 " Bind clearsearchhighlight
-bind --normal=<Esc> noh
+bind --mode=normal <Esc> noh
 
 "
 " Hides GUI fully, but enables tabs and navbar on ctrl+l
