@@ -27,6 +27,9 @@ bind --mode=input <C-m> composite noh | exclaim_quiet xdotool keyup Ctrl && xdot
 bind <C-j> composite noh | exclaim_quiet xdotool keyup Ctrl && xdotool key Return
 bind --mode=input <C-j> composite noh | exclaim_quiet xdotool keyup Ctrl && xdotool key Return
 
+" Unbind <C-c> in ex mode to allow copying cmd
+unbind --mode=ex <C-c>
+
 "
 " Hides GUI fully, but enables tabs and navbar on ctrl+l
 " Run this once manually or uncomment, then re-comment,
