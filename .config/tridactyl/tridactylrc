@@ -9,8 +9,10 @@ bind j scrollline 3
 bind k scrollline -3
 
 " Bind search
-bind / fillcmdline find
-bind ? fillcmdline find -?
+alias / find
+alias ? find -?
+bind / fillcmdline /
+bind ? fillcmdline ?
 bind n findnext 1
 bind N findnext -1
 
