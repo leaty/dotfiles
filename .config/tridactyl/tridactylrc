@@ -8,6 +8,15 @@ bind D composite tabclose | tab #
 bind j scrollline 3
 bind k scrollline -3
 
+" Bind search
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+
+" Bind clearsearchhighlight
+bind --normal=<Esc> noh
+
 "
 " Hides GUI fully, but enables tabs and navbar on ctrl+l
 " Run this once manually or uncomment, then re-comment,
