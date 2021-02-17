@@ -1,0 +1,19 @@
+! Shift+8 = ö
+! Shift+9 = ä
+! AltGr+8 = Ö
+! AltGr+9 = Ä
+! AltGr+Shift+8 = «
+! AltGr+Shift+9 = »
+keycode  17 = 8 odiaeresis 8 parenleft Odiaeresis guillemotleft bracketleft
+keycode  18 = 9 adiaeresis 9 parenright Adiaeresis guillemotright bracketright
+
+! ö = (
+! ä = )
+! Ö = [
+! Ä = ]
+! AltGr+ö = {
+! AltGr+ä = }
+! AltGr+Ö = Ø
+! AltGr+Ä = Æ
+keycode  47 = parenleft bracketleft odiaeresis Odiaeresis braceleft Oslash oslash
+keycode  48 = parenright bracketright adiaeresis Adiaeresis braceright AE ae

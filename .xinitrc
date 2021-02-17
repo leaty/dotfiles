@@ -61,10 +61,10 @@ wal -R
 
 # Set keyboard
 setxkbmap -layout se
-setxkbmap -option caps:swapescape
+setxkbmap -option ctrl:nocaps
+xcape -e 'Control_L=Escape'
+xmodmap ~/.Xmodmap
 xset r rate 200 35
-#xmodmap -e "clear lock"
-#xmodmap -e "keysym Caps_Lock = Escape"
 
 # Load nvidia-settings
 nvidia-settings --load-config-only
