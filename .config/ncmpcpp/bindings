@@ -1,11 +1,14 @@
-# Find
+# Filter
+def_key "!"
+  push_character "ctrl-u"
+  apply_filter
+
+# Search
 def_key "/"
-  find
-def_key "/"
+  push_character "ctrl-u"
   find_item_forward
 def_key "?"
-  find
-def_key "?"
+  push_character "ctrl-u"
   find_item_backward
 def_key "n"
   next_found_item
