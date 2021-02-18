@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# Enable vi mode
+set -o vi
+
 # Script vars
 #export MONITOR1='DP-4'
 export SCREEN_X=2560
