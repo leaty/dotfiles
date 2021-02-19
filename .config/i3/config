@@ -292,6 +292,12 @@ mode "move" {
 	bindsym Escape mode "default"
 }
 
+# Switch keyboard modding on/off
+# TODO: Change keybinds
+# TODO: Make a script that toggles OR switches between multiple layouts
+bindsym $mod+Shift+Next exec setxkbmap -layout se
+bindsym $mod+Shift+Prior exec xmodmap ~/.Xmodmap
+
 # Media keys
 bindsym $mod+Shift+a exec ~/.scripts/audio/audio-card-switch.sh
 bindsym XF86AudioRaiseVolume exec ~/.scripts/audio/audio-volume.sh up
