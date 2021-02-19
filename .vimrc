@@ -4,7 +4,8 @@ if &compatible | set nocompatible | endif
 "Apply all abbreviations
 "Disable intro message
 "Disable file info
-set shortmess=aIF
+"Truncate file names
+set shortmess=aIFt
 
 "Set cmd height
 "set cmdheight=2
