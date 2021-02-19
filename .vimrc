@@ -1,7 +1,7 @@
 "Fix for vim, this is default for nvim
 if &compatible | set nocompatible | endif
 
-"Apply abbreviations
+"Apply all abbreviations
 "Disable intro message
 "Disable file info
 set shortmess=aIF
