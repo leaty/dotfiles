@@ -47,11 +47,7 @@ endif
 "hi NonText guibg=NONE ctermbg=NONE
 "hi CursorColumn cterm=NONE guibg=NONE
 
-source ~/.vim/statusline.vim
-source ~/.vim/cursor.vim
-source ~/.vim/linenumber.vim
-source ~/.vim/sign.vim
-source ~/.vim/split.vim
+"Plugins
 source ~/.vim/plugins.vim
 source ~/.vim/plug.fzf.vim
 source ~/.vim/plug.neomake.vim
@@ -59,9 +55,19 @@ source ~/.vim/plug.fugitive.vim
 source ~/.vim/plug.sandwich.vim
 source ~/.vim/plug.deoplete.vim
 source ~/.vim/plug.ale.vim
-source ~/.vim/binds.vim
+source ~/.vim/plug.treesitter.vim
 
 "Enable syntax
 filetype plugin indent on
 syntax enable
 
+"Set colorscheme
+colorscheme wal
+
+"Includes
+source ~/.vim/statusline.vim
+source ~/.vim/linenumber.vim
+source ~/.vim/cursor.vim
+source ~/.vim/sign.vim
+source ~/.vim/split.vim
+source ~/.vim/binds.vim

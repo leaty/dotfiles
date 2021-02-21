@@ -35,6 +35,8 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('machakann/vim-sandwich')
 	call dein#add('AndrewRadev/sideways.vim')
 	call dein#add('dense-analysis/ale')
+	call dein#add('nvim-treesitter/nvim-treesitter')
+	call dein#add('dylanaraps/wal.vim')
 	
 	call dein#end()
 	call dein#save_state()
