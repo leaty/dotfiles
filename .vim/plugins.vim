@@ -39,7 +39,7 @@ if dein#load_state('~/.cache/dein')
 		call dein#add('nvim-treesitter/nvim-treesitter')
 		call dein#add('nvim-treesitter/playground')
 	endif
-	call dein#add('dylanaraps/wal.vim')
+	call dein#add('leaty/wal.vim', {'rev': 'feature/neovim-treesitter'})
 	
 	call dein#end()
 	call dein#save_state()
