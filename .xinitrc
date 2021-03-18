@@ -61,8 +61,7 @@ wal -R
 
 # Set keyboard
 setxkbmap -layout se
-setxkbmap -option ctrl:nocaps
-xcape -e 'Control_L=Escape'
+setxkbmap -option caps:swapescape
 xmodmap ~/.Xmodmap
 xset r rate 200 35
 
