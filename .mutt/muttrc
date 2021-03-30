@@ -28,3 +28,4 @@ set new_mail_command = "wmctrl -b add,demands_attention -r NeoMutt"
 
 # Timeout
 set timeout=60
+set connect_timeout=0

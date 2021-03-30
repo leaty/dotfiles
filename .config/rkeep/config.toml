@@ -4,13 +4,11 @@ socket = "/tmp/rkeep.sock"
 name = "keys"
 database = "/home/leaty/cloud/keys.kdbx"
 alive = 1800
-timeout = 1000
 clipboard = 10
 
 [[session]]
 name = "vizzit"
 database = "/home/leaty/cloud/vizzit.kdbx"
 alive = 1800
-timeout = 1000
 clipboard = 10
 
