@@ -48,4 +48,6 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 ttf-font-awesome
+firefox-tridactyl
+firefox-tridactyl-native
 ```
