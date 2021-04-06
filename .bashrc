@@ -6,14 +6,22 @@
 set -o vi
 
 # Script vars
-#export MONITOR1='DP-4'
+export MONITOR1='DP-4'
 export SCREEN_X=2560
 export SCREEN_Y=1440
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
+# Git function for PS1
+PS1_git() {
+	b=$(git branch --show-current 2> /dev/null)
+	if [ -n "$b" ]; then
+		echo " ($b) "
+	fi
+}
+
+PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;33m\]$(PS1_git)\[\033[1;31m\]$\[\033[0m\] '
 
 # Vars
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
