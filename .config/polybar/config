@@ -24,17 +24,18 @@ module-margin = 2
 font-0 = Monofur:weight=bold:size=11;3
 font-1 = FuraMonoNerdFont:size=14;4
 font-2 = Noto Sans CJK JP:weight=bold:size=10:antialias=true;2
+font-3 = FontAwesome:style=Regular:pixelsize=13;5
+font-4 = FontAwesome5Free:style=Solid:pixelsize=12;3
 #font-0 = ProggyCleanTT:weight=bold:size=11;3
 #font-1 = FuraMonoNerdFont:size=12;3
 #font-0 = OpenSansMono:size=10;3
 ;font-1 = RobotoMonoNerdFontMono:pixelsize=14;3
 ;font-1 = MaterialIcons:size=10;0
 ;font-2 = Termsynu:size=8:antialias=false;-2
-;font-3 = FontAwesome5Free:style=Solid:pixelsize=11
-;font-4 = FontAwesome5Brands:style=Solid:pixelsize=11
+; font-5 = FontAwesome5Brands:style=Solid:pixelsize=14;4
 
 modules-left = i3 mpd
-modules-right = volume backlight wireless-network wired-network battery cpu memory date powermenu
+modules-right = volume backlight battery cpu memory date powermenu
 
 ;wm-restack = i3
 ;override-redirect = true
@@ -325,7 +326,7 @@ type = internal/cpu
 interval = 0.5
 format = <label>
 #label = CPU %percentage%%
-label = CPU %{F#fff}%percentage%%%{F-}
+label = %{T5}%{T-}%{F#fff}%percentage:4%%%{F-}
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 2
@@ -352,15 +353,10 @@ ramp-coreload-7 = █
 ramp-coreload-7-font = 2
 ramp-coreload-7-foreground = #ff5555
 
-[module/date]
-type = internal/date
-date =   %%{F#fff}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
-date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
-
 [module/memory]
 type = internal/memory
 format = <label>
-label = RAM %{F#fff}%percentage_used%%%{F-}
+label =  %{T2}﬘%{T-}%{F#fff}%percentage_used:4%%%{F-}
 
 bar-used-width = 30
 bar-used-foreground-0 = #aaff77
@@ -375,6 +371,11 @@ bar-used-fill-font = 6
 bar-used-empty = ─
 bar-used-empty-font = 6
 bar-used-empty-foreground = #444444
+
+[module/date]
+type = internal/date
+date = %{T2}%{T-}  %%{F#fff}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
+date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
 
 [module/mpd]
 type = internal/mpd
@@ -410,6 +411,8 @@ bar-progress-empty = ─
 bar-progress-empty-font = 2
 bar-progress-empty-foreground = #44
 
+label-song = %artist% - %title:0:60:...%
+
 [module/wireless-network]
 type = internal/network
 interface = wlp3s0
@@ -438,9 +441,11 @@ type = internal/network
 interface = enp5s0
 interval = 1.0
 
-;label-connected =   %{T3}%local_ip%%{T-}         %downspeed%  祝  %upspeed%
-label-connected =   %downspeed:min%  祝  %upspeed:min%
+; label-connected =   %{T3}%local_ip%%{T-}         %downspeed%  祝  %upspeed%
+; label-connected = %{T5}%{T-}%downspeed:8%   %{T5}%{T-}%upspeed:8%
+; label-connected = %{T5}%{T-}%downspeed:9%   %{T5}%{T-}%upspeed:9%
 ;label-connected = 爵   %downspeed:min%    %upspeed:min% 祝
+label-connected =  %downspeed:min%   祝 %upspeed:min% 
 label-disconnected-foreground = #66
 
 [module/volume]
