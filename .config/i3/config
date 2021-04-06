@@ -273,8 +273,8 @@ exec_always --no-startup-id xset r rate 200 35
 
 # Hotkeys
 bindsym $mod+Shift+u exec ~/.scripts/colors/colors.sh
-bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.png' -e 'mv $f ~/Pictures/'
-bindsym --release Shift+Print exec scrot -s '%Y-%m-%d-%s_screenshot_$wx$h.png' -e 'mv $f ~/Pictures/'
+bindsym Print exec mkdir -p ~/cloud/media/image/screen/$(date +%Y/%m) && maim ~/cloud/media/image/screen/$(date +%Y/%m/screen.%Y-%m-%d.%H.%M.%S.png)
+bindsym --release Shift+Print exec mkdir -p ~/cloud/media/image/screen/$(date +%Y/%m) && maim -su ~/cloud/media/image/screen/$(date +%Y/%m/screen.%Y-%m-%d.%H.%M.%S.png)
 bindsym Mod1+Return exec firefox
 bindsym $mod+p exec rkeep -s keys
 bindsym $mod+o exec rkeep -s vizzit
@@ -299,7 +299,7 @@ bindsym $mod+Shift+Next exec setxkbmap -layout se
 bindsym $mod+Shift+Prior exec xmodmap ~/.Xmodmap
 
 # Media keys
-bindsym $mod+Shift+a exec ~/.scripts/audio/audio-card-switch.sh
+bindsym $mod+Shift+a exec ~/.scripts/audio/audio-switch-mixed.sh
 bindsym XF86AudioRaiseVolume exec ~/.scripts/audio/audio-volume.sh up
 bindsym XF86AudioLowerVolume exec ~/.scripts/audio/audio-volume.sh down
 bindsym XF86AudioMute exec ~/.scripts/audio/audio-volume.sh mute
