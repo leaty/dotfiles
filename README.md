@@ -44,6 +44,7 @@ goobook
 mycli
 less
 vimcat
+maim
 ttf-ubuntu-font-family
 nerd-fonts-complete
 noto-fonts
