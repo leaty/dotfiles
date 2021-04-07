@@ -18,6 +18,7 @@ rofi
 polkit
 polkit-gnome
 i3-gaps
+i3lock-color
 fzf
 ranger
 ripgrep
