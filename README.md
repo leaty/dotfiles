@@ -52,4 +52,5 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 ttf-font-awesome
+ttf-monofur
 ```
