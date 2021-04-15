@@ -53,4 +53,5 @@ noto-fonts-cjk
 noto-fonts-emoji
 ttf-font-awesome
 ttf-monofur
+python-jedi
 ```
