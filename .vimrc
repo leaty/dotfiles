@@ -9,6 +9,13 @@ set shortmess=aIFt
 
 "Set cmd height
 "set cmdheight=2
+"
+" Enable automatic folding
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
+" Open all folds on start
+set foldlevelstart=99
 
 "Indentation
 set noexpandtab
