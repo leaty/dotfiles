@@ -50,12 +50,13 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 noremap <silent> <C-b> :Neomake! cargo<CR>
 
 "bind git
-nmap <leader>gb :Gblame<cr>
-nmap <leader>gs :Gstatus<cr>
-nmap <leader>gc :Gcommit -v<cr>
+nmap <leader>gb :Git blame<cr>
+nmap <leader>gs :Git<cr>
+nmap <leader>gc :Git commit -v<cr>
 nmap <leader>ga :Git add -p<cr>
-nmap <leader>gm :Gcommit --amend<cr>
-nmap <leader>gp :Gpush<cr>
+nmap <leader>gm :Git commit --amend<cr>
+nmap <leader>gp :Git pull<cr>
+nmap <leader>gP :Git push<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gr :Gread<cr>
