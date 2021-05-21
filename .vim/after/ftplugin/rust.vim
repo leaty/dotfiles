@@ -3,6 +3,7 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set nowrap
 
 let b:ale_linters = ['analyzer']
 let b:ale_completion_enabled = 1

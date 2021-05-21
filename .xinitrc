@@ -65,6 +65,10 @@ setxkbmap -option caps:swapescape
 xmodmap ~/.Xmodmap
 xset r rate 200 35
 
+# Set olkb preonic keyboard
+# setxkbmap -layout us -variant altgr-intl
+# xset r rate 200 35
+
 # Load nvidia-settings
 nvidia-settings --load-config-only
 
