@@ -299,7 +299,7 @@ bindsym $mod+Shift+Next exec setxkbmap -layout se
 bindsym $mod+Shift+Prior exec xmodmap ~/.Xmodmap
 
 # Media keys
-bindsym $mod+Shift+a exec ~/.scripts/audio/audio-switch-mixed.sh
+#bindsym $mod+Shift+a exec ~/.scripts/audio/audio-switch-mixed.sh
 bindsym XF86AudioRaiseVolume exec ~/.scripts/audio/audio-volume.sh up
 bindsym XF86AudioLowerVolume exec ~/.scripts/audio/audio-volume.sh down
 bindsym XF86AudioMute exec ~/.scripts/audio/audio-volume.sh mute
