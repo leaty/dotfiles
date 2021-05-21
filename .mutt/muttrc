@@ -2,6 +2,8 @@ set editor = "nvim"
 set charset = "utf-8"
 set record = ''
 set wait_key = no
+set pager_stop = yes
+# set sort = threads
 
 # G to get mail
 bind index G imap-fetch-mail
@@ -9,6 +11,18 @@ bind index G imap-fetch-mail
 # Gmail binds
 macro index ,i "<change-folder> =<tab><enter>" "Go to inbox"
 macro index ,s "<change-folder> =[Gmail]/Sent<tab><enter>" "Go to sent mail"
+macro index ,a "<change-folder> =[Gmail]/All<tab><enter>" "Go to all mail"
+
+# Binds
+bind index,pager \Cu half-up
+bind index,pager \Cd half-down
+bind index,pager h exit
+bind pager j next-line
+bind pager k previous-line
+# bind index l display-message
+
+# Attach files picker
+macro compose A "<shell-escape>bash $HOME/.mutt/pick<enter><enter-command>source /tmp/muttpick<enter><shell-escape>bash $HOME/.mutt/pick clean<enter>" "Attach with Ranger" 
 
 # Rice
 set arrow_cursor = yes
@@ -29,3 +43,17 @@ set new_mail_command = "wmctrl -b add,demands_attention -r NeoMutt"
 # Timeout
 set timeout=60
 set connect_timeout=0
+
+# Status
+# Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?---(%s/%S)-%>-(%P)---'
+set status_format='leaty » %f %> « S:%l M:%?M?%M/?%m%?n? n%n?%?o? O:%o?%?d? D:%d?%?F?'
+set pager_format="%n » %[%a, %b %e %Y %H:%M:%S] %*  « -- (%P) %Z"
+
+# Reset status
+color status white default
+# Color first arg
+color status brightwhite default '^(.*)»' 1
+# Color 2nd arg
+color status color203 default '»(.*)«' 1
+# Color right
+color status color246 default '« (.*)' 1
