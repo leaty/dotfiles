@@ -14,9 +14,9 @@ require'nvim-treesitter.configs'.setup {
 			scope_incremental = "grc",
 		},
 	},
-	indent = {
-		enable = true,
-	},
+	-- indent = {
+	-- 	enable = true,
+	-- },
 }
 EOF
 endif
