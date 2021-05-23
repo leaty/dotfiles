@@ -3,10 +3,12 @@ configuration {
 	width: 100;
 	lines: 5;
 	columns: 2;
-	font: "Inconsolata Bold 22";
+	font: "Inconsolata Bold 24";
+	theme: "theme";
 	bw: 0;
-	padding: 464;
+	padding: 508;
 	show-icons: true;
+	icon-theme: "Papirus";
 	sort: true;
 	sorting-method: "fzf";
 	eh: 2;
