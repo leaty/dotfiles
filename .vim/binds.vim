@@ -66,7 +66,7 @@ nnoremap <silent> <leader>v :call SplitTerm()<CR>
 nnoremap <silent> <leader>b :call SplitTerm(expand('%'))<CR>
 
 "bind open new terminal
-nnoremap <silent> <leader>t :call jobstart('nohup urxvt -e bash --init-file <(echo "source ~/.bashrc;cd '.getcwd().'") > /dev/null 2>&1 &')<CR>
+nnoremap <silent> <leader>t :call jobstart('nohup urxvtc -e sh -c ''bash --init-file <(echo "source ~/.bashrc;cd '.getcwd().'")'' > /dev/null 2>&1 &')<CR>
 
 "bind split in same terminal
 "nnoremap <silent> <leader>w <CR>

@@ -6,9 +6,16 @@ database = "/home/leaty/cloud/keys.kdbx"
 alive = 1800
 clipboard = 10
 
+[session.command]
+pass = ["rofi", "-dmenu", "-password", "-p", "Password", "-theme-str", 'entry { placeholder: ""; }']
+list = ["rofi", "-dmenu", "-columns", "1", "-no-auto-select", "-i", "-p", "{session.name}"]
+
 [[session]]
 name = "vizzit"
 database = "/home/leaty/cloud/vizzit.kdbx"
 alive = 1800
 clipboard = 10
 
+[session.command]
+pass = ["rofi", "-dmenu", "-password", "-p", "Password", "-theme-str", 'entry { placeholder: ""; }']
+list = ["rofi", "-dmenu", "-columns", "1", "-no-auto-select", "-i", "-p", "{session.name}"]

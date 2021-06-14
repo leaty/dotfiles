@@ -2,7 +2,7 @@
 colors customquake
 
 " Set editor
-set editorcmd urxvt -e bash -ci 'nvim %f'
+set editorcmd urxvtc -e bash -ci 'nvim %f'
 
 " After close, return to last visited tab
 bind D composite tabclose | tab #

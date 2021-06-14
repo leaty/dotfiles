@@ -5,7 +5,6 @@ IFS=$'\n'
 pkill xwinwrap
 #sleep 1
 
-vo='xv'
 dir_config=~/.config/wall/vid/
 monitors=$(xrandr --listactivemonitors | grep -v Monitors)
 for monitor in $monitors; do
@@ -36,6 +35,6 @@ for monitor in $monitors; do
 	echo - pos: $screen_pos
 
 	feh --bg-scale "$wallpaper_img"
-	xwinwrap -g ${screen_x}x${screen_y}+$screen_pos -ov -ni -s -nf -- mpv --vo=$vo --no-audio --loop -wid WID "$wallpaper" &
+	xwinwrap -g ${screen_x}x${screen_y}+$screen_pos -ov -ni -s -nf -- mpv --hwdec=auto --no-audio --loop -wid WID "$wallpaper" &
 done
 
