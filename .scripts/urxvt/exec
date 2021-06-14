@@ -3,4 +3,4 @@
 # Used for starting terminal apps in urxvt directly
 # It ensures bash profile gets loaded before starting
 # May be unable to support non-quotable args such as --some-arg.
-urxvt -e bash -ci "$*"
+urxvtc -e bash -ci "$*"

@@ -69,6 +69,9 @@ xset r rate 200 35
 # setxkbmap -layout us -variant altgr-intl
 # xset r rate 200 35
 
+# Start urxvtd
+urxvtd -q -o -f
+
 # Load nvidia-settings
 nvidia-settings --load-config-only
 
