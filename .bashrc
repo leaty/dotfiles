@@ -3,7 +3,7 @@
 #
 
 # Enable vi mode
-set -o vi
+# set -o vi
 
 # Script vars
 export MONITOR1='DP-4'
@@ -24,6 +24,7 @@ PS1_git() {
 PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;33m\]$(PS1_git)\[\033[1;31m\]$\[\033[0m\] '
 
 # Vars
+export SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
 export CARGO_TARGET_DIR=_bin
 export TERM=xterm-256color
@@ -54,9 +55,16 @@ alias db1='LESS=-SRXF mycli --defaults-file=$HOME/.mysql/db1.conf'
 alias tag1='LESS=-SRXF mycli --defaults-file=$HOME/.mysql/tag1.conf'
 alias tag2='LESS=-SRXF mycli --defaults-file=$HOME/.mysql/tag2.conf'
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+alias cat='bat'
 alias ccat='vimcat'
 alias vim='nvim'
 alias svim='sudoedit'
+alias clip='xclip -selection clipboard'
+alias ctop='.scripts/cpu/monitor.sh'
+alias wiki='nvim -c :VimwikiIndex'
+alias todo='nvim cloud/doc/wiki/todo.md'
+alias yay='paru'
+alias yeet='paru -Rns'
 
 # Command to open vim sessions
 code() {
@@ -81,7 +89,7 @@ zu() { /usr/bin/su $@ --session-command "$SAMESHELL_CMD"; }
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
+(\cat ~/.cache/wal/sequences &)
 
 # Alternative (blocks terminal for 0-3ms)
 #cat ~/.cache/wal/sequences

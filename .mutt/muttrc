@@ -32,7 +32,8 @@ source ~/.mutt/colors
 # Visual
 auto_view text/html
 alternative_order text/enriched text/plain text/html text
-macro index,pager \cb "<pipe-message> urlscan -d -H -r 'firefox --new-window {}'<Enter>" "call urlscan to extract URLs out of a message"
+macro index,pager \cb "<pipe-message> urlscan -d -H -r 'firefox --new-window \"{}\"'<Enter>" "call urlscan to extract and open URLs out of a message"
+macro index,pager \cy "<pipe-message> urlscan -d -H -r 'echo \"{}\" | xclip -selection clipboard'<Enter>" "call urlscan to extract and yank URLs out of a message"
 
 # Notification
 set ts_enabled = yes

@@ -54,4 +54,6 @@ noto-fonts-emoji
 ttf-font-awesome
 ttf-monofur
 python-jedi
+task
+python-tasklib
 ```

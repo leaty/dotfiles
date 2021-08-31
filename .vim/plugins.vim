@@ -36,6 +36,8 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('AndrewRadev/sideways.vim')
 	call dein#add('dense-analysis/ale')
 	call dein#add('Konfekt/FastFold')
+	call dein#add('vimwiki/vimwiki')
+	call dein#add('tools-life/taskwiki')
 	call dein#add('leaty/wal.vim', {'rev': 'feature/neovim-treesitter'})
 
 	if has("nvim-0.5")
