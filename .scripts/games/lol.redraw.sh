@@ -10,7 +10,7 @@ size_y=$(echo $size | awk -F'x' '{print $2}')
 open_pos_x=$(bc <<< $size_x*96/100)
 open_pos_y=$(bc <<< $size_y*2/100)
 close_pos_x=$(bc <<< $size_x*50/100)
-close_pos_y=$(bc <<< $size_y*88/100)
+close_pos_y=$(bc <<< $size_y*90/100)
 
 # Open settings
 xdotool mousemove --sync -w $window $open_pos_x $open_pos_y click 1
