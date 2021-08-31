@@ -63,6 +63,8 @@ source ~/.vim/plug.sandwich.vim
 source ~/.vim/plug.deoplete.vim
 source ~/.vim/plug.ale.vim
 source ~/.vim/plug.treesitter.vim
+source ~/.vim/plug.wiki.vim
+source ~/.vim/plug.task.vim
 
 "Enable syntax
 filetype plugin indent on
