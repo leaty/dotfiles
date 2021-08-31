@@ -56,4 +56,6 @@ ttf-monofur
 python-jedi
 task
 python-tasklib
+bat
+paru
 ```
