@@ -55,9 +55,16 @@ alias db1='LESS=-SRXF mycli --defaults-file=$HOME/.mysql/db1.conf'
 alias tag1='LESS=-SRXF mycli --defaults-file=$HOME/.mysql/tag1.conf'
 alias tag2='LESS=-SRXF mycli --defaults-file=$HOME/.mysql/tag2.conf'
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+alias cat='bat'
 alias ccat='vimcat'
 alias vim='nvim'
 alias svim='sudoedit'
+alias clip='xclip -selection clipboard'
+alias ctop='.scripts/cpu/monitor.sh'
+alias wiki='nvim -c :VimwikiIndex'
+alias todo='nvim cloud/doc/wiki/todo.md'
+alias yay='paru'
+alias yeet='paru -Rns'
 
 # Command to open vim sessions
 code() {
