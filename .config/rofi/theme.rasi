@@ -33,8 +33,7 @@
     alternate-active-foreground: var(active-foreground);
 }
 element {
-    padding: 1px ;
-    spacing: 20px ;
+    spacing: 20px;
     border:  0;
 }
 element normal.normal {
@@ -77,7 +76,7 @@ element-text {
     background-color: rgba ( 0, 0, 0, 0 % );
     highlight:        inherit;
     text-color:       inherit;
-	vertical-align: 0.5;
+    vertical-align: 0.4;
 }
 element-icon {
     background-color: rgba ( 0, 0, 0, 0 % );
@@ -86,9 +85,10 @@ element-icon {
     border:           0px ;
 }
 window {
-    padding:          508;
+    padding: 25% 20%;
     background-color: var(background);
-    border:           0;
+    width: 100%;
+    height: 100%;
 }
 mainbox {
     padding: 0;
@@ -103,12 +103,11 @@ textbox {
     text-color: var(foreground);
 }
 listview {
-    padding:      2px 0px 0px ;
-    scrollbar:    false;
+    scrollbar: false;
     border-color: var(separatorcolor);
-    spacing:      15px ;
-    fixed-height: 0;
-    border:       0px ;
+    spacing: 15px;
+    padding: 1% 0%;
+    columns: 2;
 }
 scrollbar {
     width:        4px ;

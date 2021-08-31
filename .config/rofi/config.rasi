@@ -1,27 +1,15 @@
 configuration {
 	modi: "drun";
-	width: 100;
-	lines: 5;
-	columns: 2;
 	font: "Inconsolata Bold 24";
 	theme: "theme";
-	bw: 0;
-	padding: 508;
 	show-icons: true;
 	icon-theme: "Papirus";
 	sort: true;
 	sorting-method: "fzf";
 	eh: 2;
-	auto-select: true;
+	auto-select: false;
 	combi-modi: "run,drun,ssh";
 	matching: "fuzzy";
-	line-margin: 15;
-	separator-style: "none";
-	hide-scrollbar: true;
 	terminal: "urxvtc -e bash -ci";
-	color-normal: "argb:00252936, #ffffff, argb:00252936, argb:009575cd, #ff9575cd";
-	color-urgent: "argb:00252936, #ff0000, argb:00252936, argb:00252936, #ff0000";
-	color-active: "argb:00252936, #252936, argb:00252936, argb:009575cd, #ffc000";
-	color-window: "argb:cc252936,  #9575cd, argb:ffffffff";
 	display-drun: "";
 }
