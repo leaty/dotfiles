@@ -74,6 +74,7 @@ syntax enable
 colorscheme wal
 
 "Includes
+source ~/.vim/search.vim
 source ~/.vim/statusline.vim
 source ~/.vim/linenumber.vim
 source ~/.vim/cursor.vim
