@@ -211,7 +211,9 @@ workspace $ws_mail output $mon_one
 assign [class="discord"] $ws_chat
 assign [class="Steam"] $ws_chat
 assign [class="Wine" instance="league of legends.exe"] $ws_game
-assign [class="Wine" instance="leagueclientux.exe"] $ws_game
+assign [class="riotclientux.exe" instance="riotclientux.exe"] $ws_game
+assign [class="leagueclient.exe" instance="leagueclient.exe"] $ws_game
+assign [class="leagueclientux.exe" instance="leagueclientux.exe"] $ws_game
 assign [class="Wine"] $ws_game
 
 # Runtime assignments
