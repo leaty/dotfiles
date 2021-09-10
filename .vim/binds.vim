@@ -71,6 +71,18 @@ nnoremap <silent> <leader>t :call jobstart('nohup urxvtc -e sh -c ''bash --init-
 "bind split in same terminal
 "nnoremap <silent> <leader>w <CR>
 
+"Map quickfix
+nnoremap <silent> <leader>qn :cn<CR>
+nnoremap <silent> <leader>qN :cp<CR>
+nnoremap <silent> <leader>qc :cclose<CR>
+nnoremap <silent> <leader>qo :copen<CR>
+
+"Map window movement
+nnoremap <silent> <leader>wh <C-w>h
+nnoremap <silent> <leader>wj <C-w>j
+nnoremap <silent> <leader>wk <C-w>k
+nnoremap <silent> <leader>wl <C-w>l
+
 "Unmap arrow keys for navigation temporarily
 map <up> <nop>
 map <down> <nop>
