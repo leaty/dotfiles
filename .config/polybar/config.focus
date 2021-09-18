@@ -1,9 +1,11 @@
 [bar/barfocus]
 monitor = ${env:MONITOR}
 width = 100%
-height = 37
+height = 60
 bottom = true
-background = #99262626
+
+background_color = #313842
+background = #CC39424f
 foreground = #ffffff
 
 line-color = ${bar/bottom.background}
@@ -14,14 +16,23 @@ padding-right = 3
 padding-left = 2
 module-margin = 2
 
-font-0 = Monofur:weight=bold:size=11;3
-font-1 = FuraMonoNerdFont:size=14;4
-font-2 = Noto Sans CJK JP:weight=bold:size=10:antialias=true;2
-font-3 = FontAwesome:style=Regular:pixelsize=13;5
-font-4 = FontAwesome6Free:style=Solid:pixelsize=12;3
+font-0 = Monofur:weight=bold:size=21;6
+font-1 = FuraMonoNerdFont:size=23;8
+font-2 = Noto Sans CJK JP:weight=bold:size=21:antialias=true;6
+font-3 = FontAwesome:style=Regular:pixelsize=23;5
+font-4 = FontAwesome5Free:style=Solid:pixelsize=22;3
 
 modules-left = i3 mpd
-modules-right = volume backlight battery cpu memory date powermenu
+modules-right = volume cpu memory battery wireless-network wired-network date powermenu
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 20
+tray-background = ${self.background_color}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
 
 [bar/barfocus2]
 monitor = ${env:MONITOR}
@@ -44,7 +55,7 @@ font-0 = Monofur:weight=bold:size=10;3
 font-1 = FuraMonoNerdFont:size=12;3
 
 modules-left = i3
-modules-right = date
+modules-right = volume cpu memory battery wireless-network wired-network date powermenu
 
 ; vim:ft=dosini
 

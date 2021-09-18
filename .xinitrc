@@ -76,7 +76,7 @@ urxvtd -q -o -f
 #nvidia-settings --load-config-only
 
 # Start paction
-systemctl --user start paction
+#systemctl --user start paction
 
 # Start rkeep
 systemctl --user start rkeepd
@@ -85,7 +85,7 @@ systemctl --user start rkeepd
 #~/.scripts/xorg/xrandr.sh
 
 # Turn off screensaver
-xset -dpms s off
+#xset -dpms s off
 
 # Enable unclutter
 unclutter &

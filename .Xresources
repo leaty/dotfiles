@@ -28,7 +28,7 @@ URxvt*depth: 32
 URxvt*termName: xterm-256color
 !URxvt*termName: rxvt-unicode-256color
 !URxvt*termName: screen-256color
-URxvt*internalBorder: 20
+URxvt*internalBorder: 30
 
 !Extensions
 URxvt.perl-ext-common: default,keyboard-select,resize-font,-confirm-paste
@@ -85,3 +85,5 @@ URxvt.keysym.KP_End: \033OF
 !urxvt*shading: 70
 !URxvt.font: xft:HackNerdFont:size=13
 !Xcursor.size: 60
+
+Xft.dpi: 192

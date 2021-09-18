@@ -7,9 +7,9 @@
 bind Space:magic-space
 
 # Script vars
-export MONITOR1='DP-4'
-export SCREEN_X=2560
-export SCREEN_Y=1440
+export MONITOR1='eDP-1'
+export SCREEN_X=3200
+export SCREEN_Y=1800
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return

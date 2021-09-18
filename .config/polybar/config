@@ -3,7 +3,7 @@ include-file = ~/.config/polybar/config.focus
 [bar/top]
 monitor = ${env:MONITOR}
 width = 100%
-height = 37
+height = 60
 
 # Don't forget to change this (used in tray)
 background_color = #313842
@@ -21,21 +21,14 @@ padding-right = 3
 padding-left = 2
 module-margin = 2
 
-font-0 = Monofur:weight=bold:size=11;3
-font-1 = FuraMonoNerdFont:size=14;4
-font-2 = Noto Sans CJK JP:weight=bold:size=10:antialias=true;2
-font-3 = FontAwesome:style=Regular:pixelsize=13;5
-font-4 = FontAwesome5Free:style=Solid:pixelsize=12;3
-#font-0 = ProggyCleanTT:weight=bold:size=11;3
-#font-1 = FuraMonoNerdFont:size=12;3
-#font-0 = OpenSansMono:size=10;3
-;font-1 = RobotoMonoNerdFontMono:pixelsize=14;3
-;font-1 = MaterialIcons:size=10;0
-;font-2 = Termsynu:size=8:antialias=false;-2
-; font-5 = FontAwesome5Brands:style=Solid:pixelsize=14;4
+font-0 = Monofur:weight=bold:size=21;6
+font-1 = FuraMonoNerdFont:size=23;8
+font-2 = Noto Sans CJK JP:weight=bold:size=21:antialias=true;6
+font-3 = FontAwesome:style=Regular:pixelsize=23;5
+font-4 = FontAwesome5Free:style=Solid:pixelsize=22;3
 
-modules-left = i3 mpd
-modules-right = volume backlight battery cpu memory date powermenu
+modules-left = i3
+modules-right = volume cpu memory battery wireless-network wired-network date powermenu
 
 ;wm-restack = i3
 ;override-redirect = true
@@ -111,14 +104,16 @@ modules-left = i3
 modules-right = cpu memory
 
 [module/backlight]
-type = internal/xbacklight
+type = internal/backlight
 format = <ramp> <bar>
+
+card = intel_backlight
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 
-bar-width = 10
+bar-width = 2
 bar-indicator = |
 bar-indicator-font = 3
 bar-indicator-foreground = #ff
@@ -415,7 +410,7 @@ label-song = %artist% - %title:0:60:...%
 
 [module/wireless-network]
 type = internal/network
-interface = wlp3s0
+interface = wlan0
 interval = 3.0
 ping-interval = 10
 
@@ -424,11 +419,11 @@ label-connected = %essid%
 label-disconnected =    not connected
 label-disconnected-foreground = #66
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 直
+ramp-signal-1 = 直
+ramp-signal-2 = 直
+ramp-signal-3 = 直
+ramp-signal-4 = 直
 
 animation-packetloss-0 = 
 animation-packetloss-0-foreground = #ffa64c
