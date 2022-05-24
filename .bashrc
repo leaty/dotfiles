@@ -51,6 +51,7 @@ export XZ_OPT="-T8"
 export ZSTD_CLEVEL=3
 export ZSTD_NBTHREADS=8
 
+alias mpd='sudo systemctl restart mopidy'
 alias lgb='goobook -c ~/.goobook/leaty'
 alias vgb='goobook -c ~/.goobook/vizzit'
 alias lm='neomutt -F ~/.mutt/leaty'
