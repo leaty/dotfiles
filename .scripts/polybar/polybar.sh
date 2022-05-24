@@ -17,4 +17,4 @@ done
 
 # Launch polybar
 MONITOR=$MONITOR1 polybar top &
-#MONITOR=$MONITOR2 polybar top2 &
+MONITOR=$MONITOR2 polybar top2 &

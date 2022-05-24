@@ -25,7 +25,7 @@ font-0 = Monofur:weight=bold:size=11;3
 font-1 = FuraMonoNerdFont:size=14;4
 font-2 = Noto Sans CJK JP:weight=bold:size=10:antialias=true;2
 font-3 = FontAwesome:style=Regular:pixelsize=13;5
-font-4 = FontAwesome5Free:style=Solid:pixelsize=12;3
+font-4 = FontAwesome6Free:style=Solid:pixelsize=12;3
 #font-0 = ProggyCleanTT:weight=bold:size=11;3
 #font-1 = FuraMonoNerdFont:size=12;3
 #font-0 = OpenSansMono:size=10;3
@@ -34,8 +34,9 @@ font-4 = FontAwesome5Free:style=Solid:pixelsize=12;3
 ;font-2 = Termsynu:size=8:antialias=false;-2
 ; font-5 = FontAwesome5Brands:style=Solid:pixelsize=14;4
 
+enable-ipc = true
 modules-left = i3 mpd
-modules-right = volume backlight battery cpu memory date powermenu
+modules-right = xrp_ipc xrp volume backlight battery cpu memory date powermenu
 
 ;wm-restack = i3
 ;override-redirect = true
@@ -56,7 +57,7 @@ tray-scale = 1.0
 [bar/top2]
 monitor = ${env:MONITOR}
 width = 100%
-height = 30
+height = 37
 
 background = #99313842
 foreground = #ffffff
@@ -69,8 +70,11 @@ padding-right = 3
 padding-left = 2
 module-margin = 2
 
-font-0 = Monofur:weight=bold:size=10;3
-font-1 = FuraMonoNerdFont:size=12;3
+font-0 = Monofur:weight=bold:size=11;3
+font-1 = FuraMonoNerdFont:size=14;4
+font-2 = Noto Sans CJK JP:weight=bold:size=10:antialias=true;2
+font-3 = FontAwesome:style=Regular:pixelsize=13;5
+font-4 = FontAwesome5Free:style=Solid:pixelsize=12;3
 #font-0 = OpenSansMono:size=10;3
 #font-0 = ProggyCleanTT:weight=bold:size=12;3
 #font-1 = FuraMonoNerdFont:size=12;3
@@ -80,7 +84,7 @@ font-1 = FuraMonoNerdFont:size=12;3
 ;font-3 = FontAwesome5Free:style=Solid:pixelsize=11
 ;font-4 = FontAwesome5Brands:style=Solid:pixelsize=11
 
-modules-left = i3
+modules-left = i3 mpd
 modules-right = date
 
 [bar/bottom]
@@ -502,6 +506,23 @@ menu-0-2-exec = systemctl poweroff
 type = internal/date
 interval = 2
 date = %%{F#fff}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
+
+[module/xrp]
+type = custom/script
+exec = polybar-msg action "#xrp_ipc.hook.0" > /dev/null
+interval = 10
+
+[module/xrp_ipc]
+type = custom/ipc
+hook-0 = ~/.scripts/cryptocurrency/xrp.sh | xargs printf "$%.5s"
+hook-1 = ~/.scripts/cryptocurrency/xrp2.sh | xargs printf "%'.d:-"
+format = XRP <output>
+click-left = "#xrp_ipc.hook.1"
+
+; ; label = XRP  $%output:0:5%
+; label = XRP %output%:-
+; click-left = "$(~/.scripts/cryptocurrency/xrp1.sh click)"
+
 
 ; vim:ft=dosini
 

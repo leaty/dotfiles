@@ -20,8 +20,9 @@ font-2 = Noto Sans CJK JP:weight=bold:size=10:antialias=true;2
 font-3 = FontAwesome:style=Regular:pixelsize=13;5
 font-4 = FontAwesome5Free:style=Solid:pixelsize=12;3
 
+enable-ipc = true
 modules-left = i3 mpd
-modules-right = volume backlight battery cpu memory date powermenu
+modules-right = xrp_ipc xrp volume backlight battery cpu memory date powermenu
 
 [bar/barfocus2]
 monitor = ${env:MONITOR}
