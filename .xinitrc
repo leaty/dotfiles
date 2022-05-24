@@ -90,6 +90,11 @@ xset -dpms s off
 # Enable unclutter
 unclutter &
 
+# Camera settings
+#v4l2-ctl --set-ctrl zoom_absolute=200
+v4l2-ctl --set-parm 60
+#v4l2-ctl --set-output-parm 60
+
 # start i3
 if [ -f /usr/bin/i3 ]; then
 	exec i3
