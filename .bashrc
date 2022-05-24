@@ -105,4 +105,3 @@ zu() { /usr/bin/su $@ --session-command "$SAMESHELL_CMD"; }
 
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
-
