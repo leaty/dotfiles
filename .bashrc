@@ -47,6 +47,8 @@ export FZF_DEFAULT_OPTS='
 '
 
 export XZ_OPT="-T8"
+export ZSTD_CLEVEL=3
+export ZSTD_NBTHREADS=8
 
 alias lgb='goobook -c ~/.goobook/leaty'
 alias vgb='goobook -c ~/.goobook/vizzit'
