@@ -93,6 +93,10 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+"nnoremap H 0
+"nnoremap L $
+"nnoremap 0 H
+"nnoremap $ L
 
 "Map closing tags
 "inoremap {<CR> {<CR>}<Esc>ko
