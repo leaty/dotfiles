@@ -22,7 +22,6 @@ if dein#load_state('~/.cache/dein')
 
 	"call dein#add('flazz/vim-colorschemes')
 	call dein#add('airblade/vim-gitgutter')
-	call dein#add('cespare/vim-toml')
 	call dein#add('christoomey/vim-sort-motion')
 	call dein#add('dominickng/fzf-session.vim')
 	call dein#add('inkarkat/vim-ReplaceWithRegister')
