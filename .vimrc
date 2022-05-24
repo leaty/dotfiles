@@ -81,3 +81,4 @@ source ~/.vim/cursor.vim
 source ~/.vim/sign.vim
 source ~/.vim/split.vim
 source ~/.vim/binds.vim
+source ~/.vim/macros.vim

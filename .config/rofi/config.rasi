@@ -1,9 +1,8 @@
 configuration {
 	modi: "drun";
 	font: "Inconsolata Bold 24";
-	theme: "theme";
 	show-icons: true;
-	icon-theme: "Papirus";
+	icon-theme: "BeautyLine";
 	sort: true;
 	sorting-method: "fzf";
 	eh: 2;
@@ -13,3 +12,5 @@ configuration {
 	terminal: "urxvtc -e bash -ci";
 	display-drun: "";
 }
+
+@theme "theme"

@@ -14,7 +14,7 @@ set header_cache = "~/.mutt/leaty.d/cache/headers"
 set message_cachedir = "~/.mutt/leaty.d/cache/messages"
 
 # Contacts
-set query_command="goobook -c ~/.goobook/leaty query %s"
+set query_command="echo '' && notmuch --config=/home/leaty/.config/notmuch/leaty.conf address --output=address from:/%s/"
 bind editor <Tab> complete-query
 
 # Add contacts

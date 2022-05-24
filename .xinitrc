@@ -73,7 +73,7 @@ xset r rate 200 35
 urxvtd -q -o -f
 
 # Load nvidia-settings
-nvidia-settings --load-config-only
+#nvidia-settings --load-config-only
 
 # Start paction
 systemctl --user start paction
@@ -86,6 +86,9 @@ systemctl --user start rkeepd
 
 # Turn off screensaver
 xset -dpms s off
+
+# Enable unclutter
+unclutter &
 
 # start i3
 if [ -f /usr/bin/i3 ]; then

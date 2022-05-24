@@ -1,4 +1,5 @@
-hi VertSplit cterm=NONE
+set fillchars+=vert:\ 
+highlight VertSplit cterm=NONE ctermbg=NONE
 
 "Open buffer in new terminal
 function SplitTerm(...)

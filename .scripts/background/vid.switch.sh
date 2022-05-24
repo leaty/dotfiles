@@ -7,14 +7,14 @@ if [ -z "$1" ]; then
 fi
 
 if [ -z "$2" ]; then
-	echo 'Missing direction argument (next/prev).'
+	echo 'Missing direction argument (next/prev/first/last).'
 	exit 1
 fi
 
 dir=$1
 direction=$2
 dir_config=~/.config/wall/vid/
-screen=screen_${DISPLAY//:}.conf
+screen=screen_0.conf
 config="$dir_config$screen"
 current=""
 new=""
@@ -30,6 +30,11 @@ fi
 videos=$(find $dir -type f -printf "%T@ %p\n" | sort -nr | awk '{sub($1 OFS, ""); print $0}')
 for f in $videos; do
 	if [ -z "$current" ]; then
+		new=$f
+		break
+	fi
+
+	if [ "$direction" == "first" ]; then
 		new=$f
 		break
 	fi
@@ -50,6 +55,11 @@ for f in $videos; do
 
 	prev=$f
 done
+
+if [ "$direction" == "last" ]; then
+	new=$f
+	break
+fi
 
 if [ ! -z "$new" ]; then
 	echo "$new" > $config

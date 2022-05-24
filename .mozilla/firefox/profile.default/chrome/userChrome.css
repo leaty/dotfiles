@@ -1,21 +1,10 @@
-statuspanel[type="overLink"],
-#statuspanel[type="overLink"] {
-  display: none !important;
-}
-
 #navigator-toolbox:not(:focus-within) #toolbar-menubar > * {
   background-color: rgb(232, 232, 231);
-}
-
-#main-window[sizemode="maximized"] #content-deck {
-  padding-top: 8px;
 }
 
 :root:not([customizing]) #navigator-toolbox:not(:focus-within) #TabsToolbar {
   visibility: collapse;
 }
-
-
 
 :root:not([customizing]) #navigator-toolbox:not(:focus-within) {
   max-height: 1px;

@@ -33,8 +33,8 @@ for monitor in $monitors; do
 	echo - image: $wallpaper_img
 	echo - size: ${screen_x}x${screen_y}
 	echo - pos: $screen_pos
-
-	feh --bg-scale "$wallpaper_img"
+	
+	#feh --bg-scale "$wallpaper_img"
+	nitrogen --head=$screen --set-scaled "$wallpaper_img"
 	xwinwrap -g ${screen_x}x${screen_y}+$screen_pos -ov -ni -s -nf -- mpv --hwdec=auto --no-audio --loop -wid WID "$wallpaper" &
 done
-

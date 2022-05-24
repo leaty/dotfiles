@@ -4,6 +4,7 @@
 
 # Enable vi mode
 # set -o vi
+bind Space:magic-space
 
 # Script vars
 export MONITOR1='DP-4'
@@ -24,6 +25,7 @@ PS1_git() {
 PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;33m\]$(PS1_git)\[\033[1;31m\]$\[\033[0m\] '
 
 # Vars
+export NOTMUCH_CONFIG=$HOME/.config/notmuch/leaty.conf
 export SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
 export CARGO_TARGET_DIR=_bin
@@ -36,7 +38,7 @@ export EDITOR=nvim
 export SYSTEMD_EDITOR=nvim
 export RANGER_LOAD_DEFAULT_RC=false
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/ripgrep.conf
-export FZF_DEFAULT_COMMAND="rg --files --hidden --no-messages -g '!.git' -g '!.dots' -g '!_bin'"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --no-messages -g '!__pycache__' -g '!.git' -g '!.dots' -g '!_bin'"
 export FZF_DEFAULT_OPTS='
 	--color bg:-1
 	--color bg+:-1
@@ -45,6 +47,8 @@ export FZF_DEFAULT_OPTS='
 '
 
 export XZ_OPT="-T8"
+export ZSTD_CLEVEL=3
+export ZSTD_NBTHREADS=8
 
 alias lgb='goobook -c ~/.goobook/leaty'
 alias vgb='goobook -c ~/.goobook/vizzit'
@@ -65,6 +69,11 @@ alias wiki='nvim -c :VimwikiIndex'
 alias todo='nvim cloud/doc/wiki/todo.md'
 alias yay='paru'
 alias yeet='paru -Rns'
+alias pup='sudo pacman -Syu'
+alias pad='sudo pacman -Sy'
+alias prm='sudo pacman -Rns'
+alias unit='systemctl --user'
+alias sunit='sudo systemctl'
 
 # Command to open vim sessions
 code() {
@@ -96,4 +105,3 @@ zu() { /usr/bin/su $@ --session-command "$SAMESHELL_CMD"; }
 
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
-

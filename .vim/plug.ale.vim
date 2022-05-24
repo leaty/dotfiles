@@ -5,3 +5,4 @@ highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 highlight ALEErrorSign ctermfg=203
 highlight ALEWarningSign ctermfg=red
+highlight ALEErrorLine cterm=bold

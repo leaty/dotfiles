@@ -39,6 +39,10 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('vimwiki/vimwiki')
 	call dein#add('tools-life/taskwiki')
 	call dein#add('leaty/wal.vim', {'rev': 'feature/neovim-treesitter'})
+	call dein#add('mattn/vim-xxdcursor')
+	call dein#add('iamcco/markdown-preview.nvim',
+		\{'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
+		\'build': 'sh -c "cd app && yarn install"'})
 
 	if has("nvim-0.5")
 		call dein#add('nvim-treesitter/nvim-treesitter')
