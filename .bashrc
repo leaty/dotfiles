@@ -7,7 +7,8 @@
 bind Space:magic-space
 
 # Script vars
-export MONITOR1='DP-4'
+export MONITOR1='DisplayPort-0'
+export MONITOR2='DisplayPort-1'
 export SCREEN_X=2560
 export SCREEN_Y=1440
 

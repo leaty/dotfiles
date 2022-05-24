@@ -186,8 +186,8 @@ mouse_warping none
 #client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #client.background       #ffffff
 
-set $mon_two HDMI-0
-set $mon_one DP-2
+set $mon_one DisplayPort-0
+set $mon_two DisplayPort-1
 
 # Workspaces
 set $ws_term "1:term"

@@ -82,6 +82,8 @@ systemctl --user start paction
 systemctl --user start rkeepd
 
 # Set up displays
+xrandr --output DisplayPort-0 --mode 2560x1440 --rate 270
+xrandr --output DisplayPort-1 --mode 2560x1440 --rate 165 --right-of DisplayPort-0
 #~/.scripts/xorg/xrandr.sh
 
 # Turn off screensaver
