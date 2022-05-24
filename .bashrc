@@ -38,7 +38,7 @@ export EDITOR=nvim
 export SYSTEMD_EDITOR=nvim
 export RANGER_LOAD_DEFAULT_RC=false
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/ripgrep.conf
-export FZF_DEFAULT_COMMAND="rg --files --hidden --no-messages -g '!.git' -g '!.dots' -g '!_bin'"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --no-messages -g '!__pycache__' -g '!.git' -g '!.dots' -g '!_bin'"
 export FZF_DEFAULT_OPTS='
 	--color bg:-1
 	--color bg+:-1
