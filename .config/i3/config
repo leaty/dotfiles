@@ -231,6 +231,8 @@ exec --no-startup-id i3-msg 'workspace 4:chat; exec ~/.scripts/steam/steam.sh'
 exec --no-startup-id i3-msg 'workspace 7:music; exec ~/.scripts/urxvt/exec ncmpcpp'
 exec --no-startup-id i3-msg 'workspace 8:mail; exec ~/.scripts/urxvt/exec neomutt -F ~/.mutt/leaty'
 exec --no-startup-id i3-msg 'workspace 8:mail; exec ~/.scripts/urxvt/exec neomutt -F ~/.mutt/vizzit'
+# Start radeon-profile (gpu settings)
+exec --no-startup-id radeon-profile
 
 # Glitter and diamonds
 exec_always --no-startup-id bash -l ~/.scripts/background/vidbg.sh
