@@ -201,12 +201,12 @@ set $ws_mail "8:mail"
 
 workspace $ws_term output $mon_one
 workspace $ws_code output $mon_one
-workspace $ws_web output $mon_two
-workspace $ws_search output $mon_two
-workspace $ws_chat output $mon_one
-workspace $ws_game output $mon_two
-workspace $ws_music output $mon_one
-workspace $ws_mail output $mon_one
+workspace $ws_web output $mon_one
+workspace $ws_search output $mon_one
+workspace $ws_chat output $mon_two
+workspace $ws_game output $mon_one
+workspace $ws_music output $mon_two
+workspace $ws_mail output $mon_two
 
 # Assignments
 #assign [class="Sublime_text"] $ws_code
