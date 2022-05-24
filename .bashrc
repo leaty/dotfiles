@@ -69,6 +69,11 @@ alias wiki='nvim -c :VimwikiIndex'
 alias todo='nvim cloud/doc/wiki/todo.md'
 alias yay='paru'
 alias yeet='paru -Rns'
+alias pup='sudo pacman -Syu'
+alias pad='sudo pacman -Sy'
+alias prm='sudo pacman -Rns'
+alias unit='systemctl --user'
+alias sunit='sudo systemctl'
 
 # Command to open vim sessions
 code() {
