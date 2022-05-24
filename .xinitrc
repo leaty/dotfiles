@@ -73,7 +73,7 @@ xset r rate 200 35
 urxvtd -q -o -f
 
 # Load nvidia-settings
-nvidia-settings --load-config-only
+#nvidia-settings --load-config-only
 
 # Start paction
 systemctl --user start paction
