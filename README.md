@@ -58,4 +58,5 @@ task
 python-tasklib
 bat
 paru
+unclutter
 ```

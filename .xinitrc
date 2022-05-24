@@ -87,6 +87,9 @@ systemctl --user start rkeepd
 # Turn off screensaver
 xset -dpms s off
 
+# Enable unclutter
+unclutter &
+
 # start i3
 if [ -f /usr/bin/i3 ]; then
 	exec i3
