@@ -25,6 +25,7 @@ PS1_git() {
 PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;33m\]$(PS1_git)\[\033[1;31m\]$\[\033[0m\] '
 
 # Vars
+export NOTMUCH_CONFIG=$HOME/.config/notmuch/leaty.conf
 export SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
 export CARGO_TARGET_DIR=_bin

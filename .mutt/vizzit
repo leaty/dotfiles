@@ -14,7 +14,7 @@ set header_cache = "~/.mutt/vizzit.d/cache/headers"
 set message_cachedir = "~/.mutt/vizzit.d/cache/messages"
 
 # Contacts
-set query_command="goobook -c ~/.goobook/vizzit query %s"
+set query_command="echo '' && notmuch --config=/home/leaty/.config/notmuch/vizzit.conf address --output=address from:/%s/"
 bind editor <Tab> complete-query
 
 # Add contacts
