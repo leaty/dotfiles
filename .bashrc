@@ -4,6 +4,7 @@
 
 # Enable vi mode
 # set -o vi
+bind Space:magic-space
 
 # Script vars
 export MONITOR1='DP-4'
