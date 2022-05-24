@@ -1,5 +1,6 @@
-hi QuickFixLine cterm=bold
 hi QuickFix cterm=bold
+hi QuickFixLine cterm=bold
+hi QuickFixError cterm=bold ctermfg=NONE ctermbg=NONE
 
 setlocal statusline=%1*%n%*\ »\ %{fnamemodify(v:this_session,':t')}\ »\ %2*quickfix%*
 setlocal statusline+=%=
