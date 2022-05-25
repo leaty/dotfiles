@@ -26,7 +26,7 @@ python-pywal
 rxvt-unicode-pixbuf
 urxvt-perls
 urxvt-resize-font-git
-neovim-git
+neovim
 python-pynvim
 vim-dein
 rust
