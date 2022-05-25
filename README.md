@@ -46,6 +46,7 @@ mycli
 less
 vimcat
 maim
+ttf-jetbrains-mono
 ttf-ubuntu-font-family
 nerd-fonts-complete
 noto-fonts
