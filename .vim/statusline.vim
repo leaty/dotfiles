@@ -8,6 +8,6 @@ hi User4 cterm=bold ctermfg=246 "darkgrey
 set statusline=%1*%n%*\ »\ %{fnamemodify(v:this_session,':t')}\ »\ %2*%f%*
 set statusline+=\ %{SpinnerText()}
 set statusline+=%=
-set statusline+=\ %2*%{fugitive#head(6)}%*\ «
+set statusline+=\ %2*%{FugitiveHead(6)}%*\ «
 set statusline+=\ %3*%l,%c%*
 set statusline+=\ %4*%p%%%*

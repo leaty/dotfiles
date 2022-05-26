@@ -26,7 +26,7 @@ python-pywal
 rxvt-unicode-pixbuf
 urxvt-perls
 urxvt-resize-font-git
-neovim-git
+neovim
 python-pynvim
 vim-dein
 rust
@@ -46,6 +46,7 @@ mycli
 less
 vimcat
 maim
+ttf-jetbrains-mono
 ttf-ubuntu-font-family
 nerd-fonts-complete
 noto-fonts
