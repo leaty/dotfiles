@@ -18,7 +18,7 @@ font-0 = Monofur:weight=bold:size=11;3
 font-1 = FuraMonoNerdFont:size=14;4
 font-2 = Noto Sans CJK JP:weight=bold:size=10:antialias=true;2
 font-3 = FontAwesome:style=Regular:pixelsize=13;5
-font-4 = FontAwesome5Free:style=Solid:pixelsize=12;3
+font-4 = FontAwesome6Free:style=Solid:pixelsize=12;3
 
 modules-left = i3 mpd
 modules-right = volume backlight battery cpu memory date powermenu
