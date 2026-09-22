@@ -1,0 +1,17 @@
+return {
+	all = { class = '.*' },
+	firefox = { class = 'firefox' },
+	twitch = { class = 'firefox', title = '.+Twitch.+' },
+	youtube = { class = 'firefox', title = '.+YouTube.+' },
+	lutris = { class = 'lutris' },
+	vesktop = { class = 'vesktop' },
+	mumble = { class = 'mumble' },
+	steam = { class = 'steam' },
+	steam_popup = { class = 'steam', title = 'Steam|Friends List' },
+	element = { class = 'Element' },
+	ledger = { class = 'Ledger Live' },
+	telegram = { class = 'TelegramDesktop' },
+	nautilus = { class = 'org.gnome.Nautilus' },
+	monitor = { class = 'org.gnome.SystemMonitor' },
+	ueberzugpp = { class = '^(ueberzugpp_)(.*)$' },
+}
