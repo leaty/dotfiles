@@ -1,5 +1,5 @@
-local screen_img = '~/cloud/media/image/screen/$(date +%Y/%m/screen.%Y-%m-%d.%H.%M.%S.png)'
-local screen_vid = '~/cloud/media/video/screen/$(date +%Y/%m/screen.%Y-%m-%d.%H.%M.%S.mp4)'
+local screen_img = '~/img/screen/$(date +%Y/%m/screen.%Y-%m-%d.%H.%M.%S.png)'
+local screen_vid = '~/vid/screen/$(date +%Y/%m/screen.%Y-%m-%d.%H.%M.%S.mp4)'
 
 return {
 	hyprland = {
