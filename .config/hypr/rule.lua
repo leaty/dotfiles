@@ -4,7 +4,6 @@ local workspace = require('workspace')
 return {
 	window = {
 		-- Fade
-		{ match = { tag = 'fade' }, opacity = 0.9, name = 'fade'},
 		{ match = window.firefox, tag = '+fade' },
 		{ match = window.lutris, tag = '+fade' },
 		{ match = window.vesktop, tag = '+fade' },
@@ -15,6 +14,7 @@ return {
 		{ match = window.telegram, tag = '+fade' },
 		{ match = window.nautilus, tag = '+fade' },
 		{ match = window.monitor, tag = '+fade' },
+		{ match = { tag = 'fade' }, opacity = 0.9, name = 'fade'},
 
 		-- Float
 		{ match = window.steam, float = true },
